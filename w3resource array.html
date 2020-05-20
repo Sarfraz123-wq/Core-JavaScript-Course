@@ -1,0 +1,350 @@
+<html>
+<head> </head>
+<body>
+    <script>
+//1. Write a JavaScript function to check whether an `input` is an array or not.
+       let checkArray = [12,3,4,5];
+        document.write(Array.isArray(checkArray)+"<br>");
+//4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
+        function lastElements(n)
+        {
+        let lastArray = [1,2,3,4,5,6];
+        for(let i=lastArray.length-1;i>=n;i--)
+            {
+                document.write(lastArray[i]+" ");
+            }
+        }
+        lastElements(3);
+//5. Write a simple JavaScript program to join all elements of the following array into a string. Go to the editor
+        let myColor = ["Red", "Green", "White", "Black"];        
+        document.write(myColor.toString());
+        document.write(myColor.join());
+        document.write(myColor.join('+'));
+        document.write("<br>");
+//6. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+        let dashesArray = [1,2,3,4,5,6,7,8,9,10];
+        for(let i=00; i<dashesArray.length; i++)
+        {
+            if(dashesArray[i] %2 ==0)
+                {
+                    document.write("-"+dashesArray[i] +" ");
+                }
+            else
+                {
+                    document.write(dashesArray[i] + " ");
+                }
+        }
+        document.write("<br>"); 
+    
+//7. Write a JavaScript program to sort the items of an array. Go to the editor
+        let temp;
+        var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+       document.write(arr1.sort());
+        
+        
+        /* let max=0;
+        for(let i=0; i<arr1.length;i++)
+            {
+                for(let j=i+1; j<arr1.length; j++)
+                    {
+                        if(arr1[i] >= max)
+                            {
+                              temp = arr1[i];
+                                arr1[i] = arr1[j];
+                                arr1[j] = temp;
+                            }
+                    }
+            }
+        for(let k =0; k<arr1.length; k++)
+            {
+                document.write(arr1[k]+" ");
+            }
+        */
+        document.write("<br>")
+   //8. Write a JavaScript program to find the most frequent item of an array. Go to the editor
+    let ar=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+       let freq=1;
+        let c=0;
+        let number;
+        for(let i=0; i<ar.length;i++)
+            {
+                for(let j=i; j<ar.length;j++)
+                    {
+                        if(ar[i]==ar[j])
+                            {
+                                c++;
+                            }
+                                if(freq<c)
+                                    {
+                                        freq = c;
+                                        number = ar[i];
+                                    }
+                            }
+                    
+                c=0;
+            }
+        document.write(number +" " + freq + " times ");
+         document.write("<br>")
+     
+//9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'
+        let str = 'The Quick Brown Fox';
+        for(let i=0; i<str.length; i++)
+        {    
+        if(/[a-z]/.test (str[i]))
+                    {
+                        document.write(str[i].toUpperCase());
+                    }
+        
+            else if (/[A-Z]/.test (str[i]))
+            {
+                document.write(str[i].toLowerCase())
+            }
+        }
+        document.write("<br>")
+
+/*10. Write a JavaScript program which prints the elements of the following array. Go to the editor
+Note : Use nested for loops.
+Sample array : var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+Sample Output :
+"row 0"
+" 1"
+" 2"
+" 1"
+" 24"
+"row 1"        
+*/
+        var a = [
+                    [1, 2, 1, 24],
+                    [8, 11, 9, 4],
+                    [7, 0, 7, 27],
+                    [7, 4, 28, 14],
+                    [3, 10, 26, 7]
+                ];
+        
+                for(let i=0; i<5;i++)
+                    {
+                        document.write("Row "+i+":"+"<br>");
+                        for(let j=0; j<4;j++)
+                            {
+                                document.write(a[i][j]);
+                                document.write("<br>");
+                            }
+                    }
+
+//11.Write a JavaScript program to find the sum of squares of a numeric vector. 
+        let array = [4,5,6,1];
+        let sum=00;
+        for(let i=00; i<array.length;i++)
+            {
+                sum+= array[i]*array[i];
+            }
+        document.write(sum);
+        document.write("<br>");  
+//12. Write javaScript program to find sum of product of an array.        
+        let arry = [1,2,3,4,5,6];
+        let summ=0;
+        let product=01;
+        for(let i=0; i<arry.length;i++)
+            {
+                summ+=arry[i];
+            }
+        for(let i=0; i<arry.length;i++)
+            {
+                product*=arry[i];
+            }
+        document.write(summ+product);
+        document.write("<br>")
+//13.Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+        
+        var Mynum = [1, 2, 4,1,3,11,9,6,4,1, 5, 4, 7, 8, 7, 6];
+        let sortt = Mynum;
+        document.write(sortt);
+        document.write("<br>")
+        for(let i=0; i<sortt.length; i++)
+            {
+                for(let j=1; j<sortt.length; j++)
+                    {
+                        if(sortt[i] == sortt[j])
+                            {
+                                sortt.splice(sortt[j],1);
+                            }
+                    
+                    }
+                
+            }
+        document.write(sortt);
+        document.write("<br>")
+/*19. There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays. Go to the editor
+Sample array :
+array1 = [1,0,2,3,4];
+array2 = [3,5,6,7,8,13];
+Expected Output :
+[4, 5, 8, 10, 12, 13]
+*/
+    let = array1 = [1,0,2,3,4];
+    let = array2 = [3,5,6,7,8,13];
+        let sm=0;
+            for(let i=00; i<array1.length;i++)
+                {
+                    for(let j=0; j<array2.length; j++)
+                        {
+                            if(i==j)
+                                {
+                                  sm=array1[i]+array2[j]
+                                    document.write(sm+",");
+                                }
+                           
+                        }
+                    
+                }
+        document.write("<br>")
+    //22.Write a JavaScript program to compute the union of two arrays.
+        /*let ray1 = [1,2,3,4,2,1,4,3,5,6,42];
+        let ray2 = [2,5,6,1,1,2,3,2,3,3,4,5,12];
+        let ray3 = ray1.concat(ray2);
+        document.write(ray3);
+        sortray3 = ray3.sort();
+        document.write("<br>")
+        for(let i=0; i<sortray3.length;i++)
+            {
+                for(let j=i+1;j<sortray3.length; j++)
+                if(sortray3[i] == sortray3[j])
+                    {
+                        sortray3.splice(i,1);
+                    }
+            }
+        document.write(sortray3);
+    */
+//26. Write a JavaScript program to find a pair of elements (indices of the two numbers) from an given array whose sum equals a specific target number.        
+        numbers= [10,20,10,40,50,60,70];
+        for(let i=0; i<numbers.length;i++)
+        {
+            if(numbers[i]+numbers   [i+1] == 50)
+                {
+                    document.write(numbers[i] + " at index "+ i +" and " +numbers[i+1] +  " at index " +[i+1]);
+                }
+        }
+
+        document.write("<br>")
+//32. Write a JavaScript function to find an array contains a specific element.  
+        let arrey = [1,2,3,4,5];
+        let count=0;
+        for(let i=0; i<arrey.length;i++)
+            {
+                if(arrey[i] == 2)
+                    {
+                        document.write(true);
+                    }
+                else
+                    {
+                        count++;
+                        if(count == arrey.length)
+                            {
+                        document.write(false);
+                    
+                            }
+                    }
+            }
+    //33. Write a JavaScript script to empty an array keeping the original.
+        let aruy = [12,3,4,5,6];
+        console.log(aruy);
+        aruy.length = 0;
+        document.write("<br>")
+        document.write(aruy);// nothing prints/empty
+        
+// 34.Write a JavaScript function to get nth largest element from an unsorted array.        
+    // largest element = maximum;
+        let nums = [12,32,22,1,4,3,56,43,32,22];
+        let mxx =0;
+        for(let i=0; i<nums.length; i++)
+            {
+                if(nums[i] > mxx)
+                {
+                    mxx=nums[i];
+                }
+            }
+        document.write(mxx);
+        document.write("<br>")
+        //35. to get random item from an array.
+       // function randomItems(items)
+        {
+            for(let i=1; i<99;i++)
+            {    
+                document.write([Math.floor(Math.random()*100)+"<br>"]);
+            }
+        }
+        
+        //document.write(randomItems(100));
+    //36. To create a specified number of elements and pre filled numeric value array.
+        function preFilled(size,fillElements)
+        {
+        let rey = new Array(size).fill(fillElements);
+        document.write(rey);
+        document.write("<br>");
+        }
+        preFilled(5,10);
+        
+    //37. To create a specified number of elements and pre filled string value array.
+        //function preFilledString(size,fillStringElements)
+    
+        
+        
+        
+    //41. To generate an array between two integer numbers. increase by one from specified position.
+        function specifiedLength(start,end)
+        {
+         for(let i=start; i<=end; i++)
+            {
+                document.write(i + " ");
+            }
+        }
+        specifiedLength(-4,10)
+        document.write("----<br>")
+    //40. 
+        function rangeOfNumbers(begining,iteration)
+        {
+                let countnumbers=1;
+                while(countnumbers <=iteration)
+                {
+                document.write(begining++);
+                countnumbers++;
+                }
+        }
+        rangeOfNumbers(-6,4)// is question me basically range find karni he k number -6 se 4 martaba 1,1 add krte jaao.
+        document.write("<br>")
+        
+    //38. Write a javaScript function to move an array element from one position to another.
+       function moveToSpecificPosition(indexNumber,drop)
+       {
+        let arrayNumbers = [1,2,3,4,5,6,7,8,9];
+       // let indexNumber = 0;
+       // let drop = 3;
+        for(let i=0; i<arrayNumbers.length;i++)
+            {
+                let temp = arrayNumbers[indexNumber];
+                arrayNumbers[indexNumber] = arrayNumbers[drop];
+                arrayNumbers[drop] = temp;
+            }       
+        for(let i=0; i<arrayNumbers.length;i++)
+            {
+                document.write(arrayNumbers[i]+" ");
+            }
+       }
+        moveToSpecificPosition(1,7);
+        //31. Write a JavaScript function to remove a specific element from an array.
+        
+        let arayy = [1,2,3,4,5,6];
+        for(let i=0; i<arayy.length; i++)
+            {
+                if(arayy[i] == 4)
+                    {
+                        arayy.splice(i,1);
+                    }
+            }
+        document.write("<br>")
+        document.write(arayy);
+        
+    </script>
+    </body>
+
+</html>

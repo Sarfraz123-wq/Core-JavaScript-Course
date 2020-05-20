@@ -1,0 +1,53 @@
+<html>
+<head>
+    
+</head>
+<body>
+    
+    
+    
+    <script>
+    /*
+    Var--> It is acceptable to all the code.
+    let--> It is acceptable within the block or statement of the code.
+    const--> It's value can't be changed ex. pi*/
+    
+    function myvar()
+        {
+            var a=10;
+            if(true)
+            {
+              var a =20; 
+            document.write(a +"<br>");
+            }
+            //  var's value is also acceptable here..
+            //Its value totally changed now=20
+            document.write(a+"<br>");
+        }
+        myvar()
+        function mylet()
+        {
+            let a=70;
+            if(true)
+            {
+              let a =90; 
+            document.write(a +"<br>"); 
+        /*range of let keyword*/}
+            //  var's value is not acceptable here..
+           // It is acceptable only within statement.
+            document.write(a+"<br>");
+        }
+        mylet()
+        
+        // Constant. value doesn't change after initialization.
+        const pi=3.142;
+        document.write(pi);
+        pi = 1.234;
+        pi=1;
+        document.write(pi+"<br>");
+        var str = "Please locate where 'locate' occurs!";
+        document.write(str.indexOf('where')+"<br>");
+    
+    </script>
+    </body>
+</html>

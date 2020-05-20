@@ -1,0 +1,868 @@
+<html>
+<head></head>
+<body>
+<script>
+    // Question:4
+    function area(side1,side2,side3)
+    {
+        this.s1 = side1;
+        this.s2 = side2;
+        this.s3 = side3;
+        return this.ar = this.s1 * this.s2 * this.s3;
+    }
+     document.write(area(5,4,2)+"<br>");    
+   //-------------------------------------------------
+    //Q:37.starting k 3 number small hone chahye..
+       let a = 'PAKISTAN';
+        if(a.length<3)
+            {
+                document.write(a.toUpperCase()+"<br>");
+                
+            }
+        //else
+            //{
+          //      document.write(a);
+            //}
+          var b = (a.substring(0,3).toLowerCase());    
+          document.write(b+""+a.slice(3)+"<br>");
+    
+    //Q-36. check whether the last digit of 3 no's is same.
+    function same(no1,no2,no3)
+    {
+        this.num1 = no1;
+        var a = this.num1 % 10;
+        this.num2 = no2;
+        var b = this.num2 % 10;
+        this.num3 = no3;
+        var c = this.num3 % 10;
+        if(a == b && b == c)
+            {
+                return ("last digits are same")
+            }
+        else
+            {
+                return ('nott same');
+            }
+    }
+    document.write(same(13207,27,127)+"<br>");
+    //------------------------------------------
+    
+    // 35- Write a program to check whether a specified character exists within the 2nd to 4th position in a given string.
+    
+    function srch(str,sear)
+    {
+    if(str[1] == sear && str[3] == sear)
+        {
+            document.write('yes')
+        }
+    else
+        {
+            document.write('no');
+        }
+    }
+    srch('JavaScript','b');
+    document.write("<br>")
+    
+    //34. Write a JavaScript program to find the larger number from the two given positive integers, the two numbers are in the range 40..60 inclusive.
+    
+    function largest(num1,num2)
+    {
+        this.nm1 = num1;
+        this.nm2 = num2;
+        if(num1 && num2 > 40 && num1 && num2 <61)
+        {
+        if(nm1>num2)
+            {
+                document.write('num1 is bigger');
+            }
+        else
+            {
+                document.write('num2 is bigger');
+            }
+        }
+    }
+    largest(42,52);
+    document.write("<br>");
+    
+    //---------------------------------------------------
+    //32. Write a JavaScript program to find a value which is nearest to 100 from two different given integer values
+    
+    function diff(hik,ba)
+    {
+        this.yao = hik;
+        this.two = ba;
+        let dif1 = (Math.abs(100 - this.yao))
+        let dif2 = (Math.abs(100 - this.two))
+        if(dif1 < dif2)
+            {
+                document.write('The first no is near to 100')
+            }
+        else
+            {
+                document.write('sec no');
+            }
+            
+    }
+    diff(110,80);
+    document.write("<br>")
+    //-------------------------------------------------------------
+    
+    //21. Write a JavaScript program to create a new string adding "Py" in front of a given string. If the given string begins with "Py" then return the original string.
+    function checkstr(abc)
+    {
+        if(abc.substring(0,2)==='Py')
+        {
+            document.write(abc);
+        }
+        else
+            {
+                document.write("Py" + abc);
+            }
+    }
+    checkstr('Sarfraz');
+    document.write("<br>")
+    
+    //27. Write a JavaScript program to check whether a string starts with 'Java' and false otherwise
+    var xy = 'JavaScript he bhai';
+    if(xy.substring(0,4) === 'java' ||xy.substring(0,4) === 'Java'  )
+        {
+            document.write(true);
+        }
+    else
+        {
+            document.write(false);
+        }
+    document.write("<br>")
+    
+    //22. Write a JavaScript program to remove a character at the specified position of a given string and return the new string.(*********) 
+//23. Write a JavaScript program to create a new string from a given string changing the position of first and last characters. The string length must be greater than or equal to 1.
+    function first_last(str) 
+      {
+      if (str.length <= 1)
+      {
+        return str;
+      }
+      mid_char = str.substring(1, str.length - 1);
+      return (str.charAt(str.length - 1)) + mid_char + str.charAt(0);
+      }
+      document.write(first_last('Sarfraz'));
+    document.write("<br>")
+    //-----------------------------------------------------------------
+    //24.Write a JavaScript program to create a new string from a given string with the first character of the given string added at the front and back.
+    
+    let str2 = 'yes';
+    let first = str2.substr(0,1);
+    document.write(first+str2+first);
+    document.write("<br>")
+    
+    
+    //26.Write a JavaScript program to create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more.
+    function addfrontback(str)  
+    {
+        if(str.length>=3)
+        {        
+        var tlast = str[str.length-3];
+        var slast = str[str.length-2];
+        var last = str[str.length-1];
+    document.write(tlast+slast+last+str+tlast+slast+last);
+        }
+    }
+    addfrontback('sarfraz')
+    document.write("<br>");
+//---------------------------------------------------------------------
+//29. Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the said range.
+    function range(one,two,three)
+    {
+    if(one<=99 && one>=50 || two <=99 && two>=50 || three <=99 && three>=50)
+        {
+            document.write(true);
+        }
+    else
+        {
+            document.write(false);
+        }
+    }
+    range(6,112,72);
+    document.write("<br>");
+    //30. Write a JavaScript program to check whether a string "Script" presents at 5th (index 4) position in a given string, if "Script" presents in the string return the string without "Script" otherwise return the original one.
+    function script(str)
+    {
+    if(str.substring(4,10) == 'script')
+        {
+            let one = str.substring(0,4);
+            let two = str.substr(10);
+            document.write(one+two);
+        }
+    else
+        {
+            document.write(str);
+        }
+    }
+    
+    script('Javascript c++ csharp he yar');
+    document.write("<br>");
+    
+//35. Write a program to check whether a specified character exists within the 2nd to 4th position in a given string.    
+    function checkchar(str,ch)
+    {
+    if(str[1] == ch || str[2] == ch || str[3] == ch)
+        {
+            document.write(true);
+        }
+    else
+        document.write(false);
+    }
+    checkchar('Javascript','v');
+    document.write("<br>");
+//-------------------------------------------------------------------    
+//37. Write a JavaScript program to create new string with first 3 characters are in lower case from a given string. If the string length is less than 3 convert all the characters in upper case.    
+    function firstThreeCharLower(str)
+    {
+    if(str.length<3)
+        {
+            document.write(str.toUpperCase());
+        }
+    
+    if(str.length>=3)
+        {
+            let a = str.substring(0,3).toLowerCase();
+            let b = str.substring(3);
+            document.write(a+b);
+        }
+    }
+    firstThreeCharLower('PAKISTAN');
+    document.write("<br>");
+//--------------------------------------------------------------------
+//43. Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.    
+    function rightmost(no1,no2,no3)
+    {
+    if(no1%10 == no2%10 && no2%10 == no3%10)
+        {
+            document.write(true);
+        }
+    else
+        {
+            document.write(false);
+        }
+    }
+    rightmost(113,42,82);
+    document.write("<br>");
+//---------------------------------------------------------------------
+//44. Write a JavaScript program to check from three given integers that whether a number is greater than or equal to 20 and less than one of the others.
+    function goodLogic(x, y, z) 
+    {
+        return (x >= 20 && (x < y || x < z)) ||
+        (y >= 20 && (y < x || y < z)) ||
+        (z >= 20 && (z < y || z < x));
+    }
+    document.write(goodLogic(32,25,14));
+    document.write("<br>");
+//---------------------------------------------------------------------
+//45. Write a JavaScript program to check two given integer values and return true if one of the number is 15 or if their sum or difference is 15.
+    function checkFifteen(a,b)
+    {
+    if(a==15 || b==15 || a+b ==15 || a-b==15 || b-a ==15)
+        {
+            document.write(true);
+        }
+    else
+    {
+        document.write(false);
+    }
+    }
+    checkFifteen(15,12);
+    document.write("<br>");
+//------------------------------------------------------------------
+//48. Write a JavaScript program to reverse a given string.
+    let str = 'Pakistan';
+    document.write(str.split("").reverse().join(""));
+    document.write("<br>");
+ //49.Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.***********
+    
+// 50. Write a JavaScript program to capitalize the first letter of each   word of a given string  *******************
+//52. Write a JavaScript program to convert the letters of a given string in alphabetical order.     
+    let sentence = "pakistan";
+    document.write(sentence.split("").sort().join(""));
+    document.write("<br>");
+//53. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.
+    function ab_Check(str)
+ {
+    return (/a...b/).test(str) || (/b...a/).test(str);
+ }
+    document.write(ab_Check('chainsbreak'));
+    document.write("<br>");
+//54. Write a JavaScript program to count the number of vowels in a given string.    
+    let sent = 'sarfraz';
+    //let y = sent.split("");
+    let count=00;
+    for(var i=00; i<sent.length;i++)
+        {
+            if(sent[i] == 'a')
+                {
+                 count+=1;   
+                }
+             if(sent[i] == 'e')
+                {
+                 count+=1;   
+                } if(sent[i] == 'i')
+                {
+                 count+=1;   
+                } if(sent[i] == 'o')
+                {
+                 count+=1;   
+                } if(sent[i] == 'u')
+                {
+                 count+=1;   
+                }
+        }
+    document.write(count);
+    document.write("<br>");
+  
+    /*  let stnce = "sarfraz";
+    document.write((stnce.replace(/[^aeiou]/g, "").length));
+    */
+    
+//55. Write a JavaScript program to check whether a given string contains equal number of p's and t's  
+    let abc = 'Pakistanpt';
+    let countp=0;
+    let countt=0;
+    for(let i=0; i<abc.length;i++)
+        {
+            if(abc[i]=='t' ||abc[i]=='T' )
+                {
+                    countt+=1;
+                }
+            
+            if(abc[i]=='p'||abc[i]=='P')
+                {
+                    countp+=1;
+                }
+            
+        }
+    if(countp==countt)
+                {
+                    document.write("equal")
+                }
+            else
+                {
+                    document.write("not equal");
+                }
+    document.write("<br>");
+    
+ //57. Write a JavaScript program to create a new string of specified copies (positive number) of a given string.
+    function copyy(n)
+    {let cop = 'sarfraz';
+    document.write(cop.repeat(n));
+    }
+    copyy(3);
+    
+    document.write("<br>");
+    
+//58. Write a JavaScript program to create a new string of 4 copies of the last 3 characters of a given original string. The length of the given string must be 3 and above    
+    let hao = 'tahirbha';
+    let ccc = hao[hao.length-3];
+    let bbb = hao[hao.length-2];
+    let aaa = hao[hao.length-1];
+    let mix = ccc+bbb+aaa;
+    document.write(mix.repeat(4)+"<br>");
+//Write a JavaScript program to extract the first half of a string of even length.
+    function half(js)
+    {
+    if(js.length%2==0)
+    {
+    for(let j=0;j<js.length/2; j++)
+        {
+            document.write(js[j]);
+        }
+        
+    }
+    else
+        {
+            document.write(js);
+        }
+    }
+    half('javascript');
+    document.write("<br>");
+    half('php');
+    document.write("<br>");
+   
+ //60. Write a JavaScript program to create a new string without the first and last character of a given string.
+    let jumlo = 'pakistan';
+    document.write(jumlo.substring(1,jumlo.length-1));
+    document.write("<br>");
+//61. Write a JavaScript program to concatenate two strings except their first character.
+    let st1 = 'Java';
+    let st2 = 'php';
+    let stt1 = st1.substring(1);
+    let stt2 = st2.substring(1);
+    let st3 = stt1.concat(stt2);
+    document.write(st3);
+    document.write("<br>");
+//62. Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three.
+    let hhh = 'Pakistan';
+    let h1 = hhh.substr(hhh.length-3);
+    let h2 = hhh.substring(0,hhh.length-3)
+    
+    document.write(h1+h2);document.write("<br>");
+//63. Write a JavaScript program to create a string using the middle three characters of a given string of odd length. The string length must be greater or equal to three. 
+    let g = '123456789';
+    if(g.length >=3)
+        {
+            if(g.length%2!=0)
+                {
+                   let mid = (g.length+1)/2;
+                    document.write(g.substring(mid-2,mid+1));
+                }
+        }
+    document.write("<br>");
+//64. Write a JavaScript program to concatenate two strings and return the result. If the length of the strings are not same then remove the characters from the longer string.
+    
+    let s1 = '12345678';
+    let s2 = 'abcde';
+    if(s1.length == s2.length)
+        {
+            let s3 = s1.concat(s2);
+            document.write(s3+"<br>");
+        }
+    else
+        {
+            if(s1.length>s2.length)
+                {
+                    let abc = s1.substring(0,s2.length);
+                    document.write(abc.concat(s2)+"<br>");
+                }
+            else
+                {
+                    if(s2.length>s1.length)
+                {
+                    let bce = s2.substring(0,s1.length);
+                    document.write(s1.concat(bce)+"<br>");
+                }    
+                }
+        }
+//65. Write a JavaScript program to test whether a string end with "Script". The string length must be greater or equal to 6.
+    
+    let yeah = 'javacsharpscript';
+    if(yeah.length>=6)
+    {    
+        if(yeah.substring(yeah.length-6) == 'script')
+        {
+            document.write(true);
+        }
+        else
+            document.write(false);
+    
+    
+    }
+    document.write("<br>");
+//66. Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.
+    function cityName(inp)
+    {
+    let city1 = 'Los Angles';
+    let city2 = 'New York';
+    if(inp == 'Los' || inp == 'los')
+        {
+            document.write(city1+"<br>");
+        }
+    else
+        {
+            document.write("");
+        }
+    if(inp == 'New' || inp == 'new')
+        {
+            document.write(city2+"<br>");
+        }
+    else
+        {
+            document.write("");
+        }
+    }
+    cityName('los');
+    
+    
+//67. Write a JavaScript program to create a new string from a given string, removing the first and last characters of the string if the first or last character are 'P'. Return the original string if the condition is not satisfied.     
+    let ss = 'pythonp';
+    if(ss.charAt(0) == 'p' || ss.charAt(ss.length-1) == 'p')
+        {
+           document.write(ss.substring(1,ss.length-1)+"<br>");
+        }
+    else
+        {
+            document.write(ss);
+        }
+    
+ //68. Write a JavaScript program to create a new string using the first and last n characters from a given sting. The string length must be greater or equal to n. 
+    function equal(o,n)
+    {//let o = 'Javascript';
+    //let n = 2;
+    let won = o.substring(0,n);
+   // document.write(won+"<br>");
+    let too = o.substring(o.length-n);
+    //document.write(too+"<br>");
+    document.write(won+too+"<br>");    
+    }
+    equal('sarfrazahmed',2)
+    
+
+//69. Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3.    
+    let arra = [1,2,3];
+    let sum=0;
+    for(let i=0; i<arra.length; i++)
+        {
+            sum+=arra[i];
+        }
+    document.write(sum+"<br>");
+ //71. Write a JavaScript program to check whether 1 appears in first or last position of a given array of integers. The array length must be greater or equal to 1.   
+    let arrrr = [1,3,5];
+    if (arrrr[0] == 1)
+    {
+        document.write('at zeroth index')
+    }
+    if (arrrr[arrrr.length-1] == 1)
+    {
+         document.write('at last index');
+        
+    }
+    document.write("<br>");
+    
+  //72. Write a JavaScript program to check whether the first and last elements are equal of a given array of integers length 3. 
+    let ar = [1,2,3,4,5,6,7,1]
+    if(ar[0] == ar[ar.length-1])
+    {
+        document.write('equal')
+    }
+    else
+        document.write('not equal');
+    document.write("<br>");
+    document.write(ar.reverse()+"<br>");
+//74. Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array.   
+    let aR = [1,2,3,4,5];
+    let max=0;
+    for(let i=0; i<aR.length; i++)
+        {
+           if(aR[i] > max)
+               {
+                   
+                   max=aR[i];
+               }
+        }
+    document.write(aR.fill(max));
+    document.write("<br>");
+//75.Write a JavaScript program to create a new array taking the middle elements of the two arrays of integer.
+    
+    let arrayy = [1,2,3,4,5,6];
+    let arrayy2 = [7,8,9,10,11,12];
+    let lacey = arrayy.slice([1],[arrayy.length-1]);
+    let evans =  arrayy2.slice([1],[arrayy2.length-1]);
+    document.write(lacey+","+evans+"<br>");
+    
+//76. Write a JavaScript program to create a new array taking the first and last elements from a given array of integers and length must be greater or equal to 1
+    
+ /*   let man = new Array(5);
+    {
+        for(let i=0; i<man.length; i++)
+            {
+                man[i] = prompt('input');
+            }
+    }
+    
+   let aa = man[0].toString();
+    let bb = man[man.length-1].toString();
+    document.write(aa+bb);
+  */
+//77. Write a JavaScript program to test whether an array of integers contains 1 or a 3.    
+    
+    let flair = [12,32,2,8,4,6,4,2,4,6];
+    let count13=0;
+          
+    for(let i=0;i<flair.length;i++)
+        {
+             if(flair[i] != 1 || flair[i] != 3)
+                {
+                    document.write('it contains 1 or 3')
+                    break;
+                }
+            else
+                {
+                    count13++;
+                    if(count13 == flair.length)
+                    {    
+                        document.write('not contains');
+                    }
+                }
+        }
+    document.write("<br>");
+    //79. Write a JavaScript program to test whether a given array of integers contains 30 and 40 twice.
+    let charllotte = [1,2,3,4,30,40,2,3,30,45,3,2,40,10,2,3];
+    let count30=0;
+    let count40=0;
+        for(let i=0; i<charllotte.length; i++)
+            {
+                if(charllotte[i] == 30)
+                    {
+                        count30++
+                    }
+                if(charllotte[i] == 40)
+                    {
+                        count40++
+                    }
+             }
+    if(count30 ==2 && count40 == 2)
+    {
+        document.write(true)
+    }
+    else
+        {
+            document.write(false);
+        }
+    document.write("<br>");
+//80. Write a JavaScript program to swap the first and last elements of a given array of integers    
+    
+    let boss = [1,2,3,4,5];
+    [boss[0] , boss[boss.length-1]] = [boss[boss.length-1], boss[0]];
+    document.write(boss+"<br>");
+  //82. Write a JavaScript to add two positive integers without carry.
+    function add_two_int_without_carrying(n1, n2) 
+    {
+    var result = 0,
+        x = 1;
+    while (n1 > 0 && n2 > 0)
+    {
+        result += x * ((n1 + n2) % 10);
+        n1 = Math.floor(n1 / 10);
+        n2 = Math.floor(n2 / 10);
+        x*= 10;
+    }
+    return result;
+}
+    document.write("<br>")
+document.write(add_two_int_without_carrying(222, 911)+"<br>")
+document.write(add_two_int_without_carrying(200, 900)+"<br>")
+
+//83. Write a JavaScript to find the longest string from a given array of strings. 
+    let maxxx=0;
+    let john = ['pakistan','karachi','PakistanZindabad','sarfraz','tahir',];
+    for(let i=0; i<john.length; i++)
+    {   if(john[i].length > maxxx)
+        { 
+            maxxx  = john[i].length;
+        } 
+    }
+    //document.write(john[i]);
+    document.write(maxxx+" ");
+    for(let i=0; i<john.length; i++)
+    {
+        if(maxxx==john[i].length)
+            {
+                document.write(john[i] + "at index of "+ i);
+            }
+    }
+    document.write("<br>");
+//84. Write a JavaScript to replace each character of a given string by the next one in the English alphabet.  
+    
+//85. Write a JavaScript code to divide a given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on. Now compute the sum of two parts and store into an array of size two.
+    let aray = [1,2,3,4,5,6];
+    var sm2=0;
+    var sm1=00;
+   // var result [0,0];
+    for(let i=0;i<aray.length;i=i+2)
+    {
+        part1 = aray[i];
+        sm1+=aray[i];
+    }
+        for(let j=1; j<aray.length; j=j+2)
+        {
+            sm2+=aray[j];
+        }
+    
+    document.write(sm1+ ","+sm2+"<br>");
+    
+/*86. Write a JavaScript program to find the types of a given angle.  Go to the editor
+Types of angles:
+Acute angle: An angle between 0 and 90 degrees.
+Right angle: An 90 degree angle.
+Obtuse angle: An angle between 90 and 180 degrees.
+Straight angle: A 180 degree angle.    
+*/
+    function typeOfAngle(angle)
+    {
+        if(angle >= 0 && angle<90)
+            {
+                document.write("acute angle");
+            }
+    if(angle == 90)
+            {
+                document.write("Right angle");
+            }
+    if(angle > 90 && angle<180)
+            {
+                document.write("Obtuse angle");
+            }
+    if(angle == 180)
+            {
+                document.write("Straight angle");
+            }        
+    }
+    
+    typeOfAngle(165);
+    document.write("<br>")
+ //88. Write a JavaScript program to check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.     
+    
+    function divisor_Program(inte1,inte2,divi)
+    {
+        if(inte1%divi == 0 && inte2%divi == 0)
+            {
+                document.write(true)
+            }
+        else
+            {
+                document.write(false);
+            }
+    }
+    divisor_Program(25,10,5);
+    document.write("<br>");
+ //89. Write a JavaScript program to check whether it is possible to replace $ in a given expression x $ y = z with one of the four signs +, -, * or / to obtain a correct expression.  Go to the editor
+//For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator (*) to obtain x * y = z   
+    let x = 10;
+    let y = 2;
+    let z = 5;
+    let exp = "x '$' y";
+    if(x * y == z)
+        {
+              document.write(exp.replace('$','*'));
+        }
+    else if(x / y == z)
+        {
+            document.write(exp.replace('$','/'));
+        }
+    else if(x + y == z)
+        {
+           document.write(exp.replace('$','+'));
+        }
+    else if(x - y == z)
+        {
+            document.write(exp.replace('$','-'));
+        }
+    document.write("<br>")
+                 
+//94. Write a JavaScript program to find the number which appears most in a given array of integers        
+  
+//95. Write a JavaScript program to replace all the numbers with a specified number of a given array of integers. 
+    function replaceNumbers(noomber,specifiedNumber)
+    {
+    let v = [1,2,3,4,5,6,5,4,3,6,7,8,9,5,7];
+    for(let i=00; i<v.length;i++)
+        {
+            if(v[i] == noomber)
+                {
+                    v[i] = specifiedNumber;
+                }
+        }
+            document.write(v);
+    }
+    replaceNumbers(5,300);
+    document.write("<br>");
+    
+    // Print the frequency of a specified number(input).
+    function frequency(nmbr)
+    {
+    let vv = [1,2,3,4,5,6,5,4,3,6,7,8,9,5,7];
+    spcount=0;
+        for(let i=00; i<vv.length;i++)
+        {
+            
+            if(vv[i] == nmbr)
+                {
+                    spcount+=1;
+                }
+        }
+            document.write(spcount);
+    }
+    frequency(3);
+    document.write("<br>");
+    
+//96. Write a JavaScript program to compute the sum of absolute differences of consecutive numbers of a given array of integers.   
+    let k = [1,2,3,2,-5];
+    var dsum=00;
+    for(let i=0; i<k.length-1;i++)
+        {
+                
+            dsum = dsum + Math.abs(k[i] - k[i+1]);
+        
+        }
+    document.write(dsum);//Good.
+    document.write("<br>");
+//98. Write a JavaScript program to switch case of the minimum possible number of letters to make a given string written in the upper case or in the lower case. Go to the editor
+//Fox example "Write" will be write and "PHp" will be "PHP"    
+  
+     var lcount=0;
+     var ucount=0;
+     var sttrring = "Pakistan";
+     for(let i=0; i<sttrring.length; i++)
+    {
+         if((/[a-z]/).test (sttrring[i]))
+            {
+              lcount = lcount + 1;
+            }
+     else if((/[A-Z]/).test (sttrring[i]))   {
+                ucount = ucount + 1;
+            }  
+    }
+    document.write(lcount+",");
+    document.write(ucount+"<br>");
+    if(lcount>ucount)
+        {
+            document.write(sttrring.toLowerCase());
+        }
+    else
+        {
+            document.write(sttrring.toUpperCase());
+        }
+        document.write("<br>")
+//99. Write a JavaScript program to check whether it is possible to rearrange characters of a given string in such way that it will become equal to another given string.
+    let st = 'pakistan';
+    let st22= 'tankispa';
+       if(st.length == st22.length)
+       {
+            let srt1= st.split("").sort().join("");     
+            let srt2 = st.split("").sort().join("");
+            if(srt1 == srt2)
+               {
+                   document.write(true);
+               }
+           else
+               {
+                   document.write(false);
+               }
+       }
+
+//100.Write a JavaScript program to check whether there is at least one element which occurs in two given sorted arrays of integers.
+    let randy = [2,3,4,5,1];
+    let orton = [9,8,9,10,7];
+    let rko = randy.concat(orton);
+    let  similar=0;
+    for(let i=0; i<randy.length;i++)
+        {
+            for(let j=0; j<orton.length;j++)
+            {    
+            if(randy[i] == orton[j])
+                {
+                    document.write("found");
+                    break;
+                }
+            else
+                {
+                    
+                    similar++;
+                    if(similar==randy.length+orton.length)   {
+                            document.write('Not found');
+                        }
+                }
+            }
+        }
+    //109. Write a JavaScript program to sort an array of all prime numbers between 1 and a given integer.
+    
+    
+    </script>
+    </body>
+</html>

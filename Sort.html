@@ -1,0 +1,100 @@
+<html>
+<head></head>
+<body>
+    
+    <script>
+    //Sorting an Array
+//The sort() method sorts an array alphabetically:
+
+        //Example
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort();
+        document.write(fruits+"<br>");
+        // Sorts the elements of fruits
+        //Reversing an Array
+        //The reverse() method reverses the elements in an array.
+
+        //You can use it to sort an array in descending order:
+
+        //Example
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort();        // First sort the elements of fruits
+        fruits.reverse();     // Then reverse the order of the elements
+        document.write(fruits+"<br>");
+        
+        //Numeric Sort
+       // By default, the sort() function sorts values as strings.
+
+        //This works well for strings ("Apple" comes before "Banana").
+
+        //However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+
+        //Because of this, the sort() method will produce incorrect result when sorting numbers.
+
+        //You can fix this by providing a compare function:
+        document.write("------------------------------"+"<br>");
+        var points = [-43,32,-11,32,-4,-1,4,5,37,776];
+        points.sort(function(a, b){return a - b});
+        document.write(points+"<br>");
+        document.write("------------------------------"+"<br>");
+        
+       
+        //Use the same trick to sort an array descending:
+
+        //Example
+        var points = [40, 100, 1, 5, 25, 10];
+        points.sort(function(a, b){return b - a});
+        document.write(points+"<br>");
+       document.write("------------------------------"+"<br>");
+        
+        //Sorting an Array in Random Order
+        //Example
+        var points = [40, 100, 1, 5, 25, 10];
+        points.sort(function(a, b){return .5 - Math.random()});
+        document.write(points+"<br>");
+        document.write("------------------------------"+"<br>");
+        
+        /*
+                The Fisher Yates Method
+        The above example, array.sort(), is not accurate, it will favor some numbers over the others.
+
+        The most popular correct method, is called the Fisher Yates shuffle, and was introduced in data science as early as 1938!
+
+        In JavaScript the method can be translated to this:*/
+       /* var points = [40, 100, 1, 5, 25, 10];
+
+        for (i = points.length -1; i > 0; i--) {
+          j = Math.floor(Math.random() * i)
+          k = points[i]
+          points[i] = points[j]
+          points[j] = k
+        }*/
+        /*
+        Find the Highest (or Lowest) Array Value
+        There are no built-in functions for finding the max or min value in an array.
+
+        However, after you have sorted an array, you can use the index to obtain the highest and lowest values.
+
+        Sorting ascending:*/
+       /* var points = [40, 100, 1, 5, 25, 10];
+        points.sort(function(a, b){return a - b});
+        now points[0] contains the lowest value
+        and points[points.length-1] contains the highest value
+        *//*
+        Sorting descending:
+
+        Example*/
+        var points = [40, 100, 1, 5, 25, 10];
+        points.sort(function(a, b){return b - a});
+        document.write(points+"<br>");
+        document.write("The maximum number in an array is "+ points[0]+"<br>");
+        document.write("The minimum number in an array is "+ points[points.length-1]+"<br>");
+        //Using Math.max() on an Array
+        document.write(Math.max(50,5,32,11,43,76,34)+"<br>");
+        document.write(Math.min(50,5,32,11,43,76,34)+"<br>");
+        document.write(Math.floor(2.1)+"<br>");
+        document.write(Math.min.apply(points));
+        
+    </script>
+    </body>
+</html>

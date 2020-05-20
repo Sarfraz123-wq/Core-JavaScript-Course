@@ -1,0 +1,77 @@
+<html>
+<head></head>
+<body>
+    
+    <script>
+        //Length property. Also include white spaces.
+        var a = "sarfraz Rasheed";
+        document.write(a.length+"<br>"); // it is a property not a method so parenthesis doesn't apply
+        document.write("------------------------"+"<br>");
+        //charAt Method..
+        document.write(a.charAt(1)+"<br>"); //starts with index 0, prints a 
+         document.write("------------------------"+"<br>");
+        //charCodeAt. ye method unicode print karta he.
+        document.write(a.charCodeAt(1)+"<br>");
+        document.write(a.codePointAt(0)+"<br>");
+         document.write("------------------------"+"<br>");
+        //uppercase and lowercase.
+        document.write(a.toUpperCase()+"<br>");
+         document.write("------------------------"+"<br>");
+        //trim method. ye method white space delete karta he
+        // agar hm console.log kar k check krnge to clear ho jaayega.
+        var b = "Tahir            Rasheed        Kehar";
+        document.write(b.trim()+"<br>"); //same 
+        console.log(b.trim());
+         document.write("------------------------"+"<br>");
+        document.write(b.endsWith("Kehar")+"<br>");// yes it ends with.
+         document.write("------------------------"+"<br>");
+        document.write(b.includes("Rasheed")+"<br>");// yes it is.
+         document.write("------------------------"+"<br>");
+        document.write(b.indexOf("Rasheed",15)+"<br>");//search starts from index 15. at 17th index R of Rasheed's found. search method can't take where to search index as this take 2nd parameter.
+         document.write("------------------------"+"<br>");
+        document.write(b.lastIndexOf("Rasheed",16)+"<br>");//works same as indexOf.search starts from index 16
+        document.write("------------------------"+"<br>");
+        document.write(b.localeCompare("Sarfraz")+"<br>");
+        // ye 1 print karega matlab agar sarfraz add krwana chahen to wo pehle add hoga string me Sarfraz ki 'S' Tahir ki 'T' se pehle aati he isi tarah U,v,w,x,y,z k names -1 me aayenge..       
+         document.write("------------------------"+"<br>");
+        document.write(b.match("Tah")+"<br>");// ye agar string ka koi part match he to print karta he nahi to null print karta he.
+         document.write("------------------------"+"<br>");
+        document.write(b.repeat(5)+"<br>"); //ye string ki 5times copy karega.
+         document.write("------------------------"+"<br>");
+        document.write(b.search("K")+"<br>"); //at index32, same as indexOf. search kr k batata he.
+         document.write("------------------------"+"<br>");
+        document.write(b.slice(2,7)+"<br>"); // prints characters from index 2 to 6.
+         document.write("------------------------"+"<br>");
+        document.write(b.startsWith("Tahir")+"<br>");//same as endWith but this tells starts
+         document.write("------------------------"+"<br>");
+        document.write(b.substr(0,5)+"<br>"); // same as slice prints character from 0 to 4 but it specifies the length of the extrated part
+         document.write("------------------------"+"<br>");
+        document.write(b.substring(0,5)+"<br>");// same as slice prints character from 0 to 4 but subsring cant accept negative indexes;
+         document.write("------------------------"+"<br>");
+        document.write(b.toString()+"<br>");
+         document.write("------------------------"+"<br>");
+        var str = "Hey&my&name&is&Sarfraz&Rashed&Kehar";
+        document.write(str.split("&")+"<br>");// A string can be converted to an array with the split() method:
+         document.write("------------------------"+"<br>");
+        var str = "My name is Sarfraz Rasheed";
+        document.write(str.replace("Sarfraz","Tahir")+"<br>");
+         document.write("------------------------"+"<br>");
+        var str = "Hello World";
+        document.write(str.valueOf()+"<br>");//Return the primitive value of a string object:
+      //  Note: This method is usually called automatically by JavaScript behind the scenes, and not explicitly in code.
+         document.write("------------------------"+"<br>");
+        document.write(str.toLocaleUpperCase()+"<br>");//uppercase 
+        document.write("------------------------"+"<br>");
+        document.write(str.toLocaleLowerCase()+"<br>");//lowercase 
+        document.write("------------------------"+"<br>");
+       document.write(String.fromCharCode(65)+"<br>");//Convert a Unicode number into a character.
+        var points = [40, 100, 1, 5, 25, 10];
+        points.sort(function(a, b){return a - b});
+        document.write(points);
+    </script></body>
+
+
+</html>
+
+
+

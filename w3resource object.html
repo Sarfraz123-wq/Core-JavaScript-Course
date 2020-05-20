@@ -1,0 +1,155 @@
+<html>
+<head>  </head>
+<body>
+    <script>
+    /*1. Write a JavaScript program to list the properties of a JavaScript object. Go to the editor
+    Sample object:
+    var student = {
+    name : "David Rayy",
+    sclass : "VI",
+    rollno : 12 };
+    Sample Output: name,sclass,rollno
+    */
+    var student = 
+        {
+            name : "David Rayy",
+            sclass : "VI",
+            rollno : 12 
+        };
+        document.write(student.name,student.sclass,student.rollno);
+/*2. Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property. Go to the editor
+Sample object:
+var student = {
+name : "David Rayy",
+sclass : "VI",
+rollno : 12 };
+*/      document.write("<br>")
+        var student = 
+        {
+        name : "David Rayy",
+        sclass : "VI",
+        rollno : 12 
+        };
+        document.write(student.name + " " + student.sclass + " " + student.rollno  + " ");
+        delete student.rollno;
+        document.write("<br>")
+        document.write(student.name + " " + student.sclass + " " + student.rollno  + " ");
+        document.write(typeof(student.rollno));       
+//3. Write a JavaScript program to check property exists or not.
+        
+        var teacher = 
+        {
+        name : "David Rayy",
+        sclass : "VI",
+        rollno : 12 
+        };
+       function myFunction(myProperty)
+        {
+            if(teacher.hasOwnProperty(myProperty))
+                {
+                    return true;
+                }
+            else
+                {
+                    return 'Not found';
+                }
+        }
+        document.write(myFunction('name'));
+    
+//3. Write a JavaScript program to get the length of a JavaScript object.
+       var teacher = 
+        {
+        name : "David Rayy",
+        sclass : "VI",
+        rollno : 12 
+        };
+       let ocount=0;
+        for(let key in teacher)
+           {
+              // document.write(key);
+                ocount++;
+           }
+        document.write("<br>")
+        document.write(ocount)
+        document.write("<br>")
+   
+//4. Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.
+        
+    var library = [ 
+            {
+                title: 'Bill Gates',
+                author: 'The Road Ahead',
+                readingStatus: true
+            },
+            {
+                title: 'Steve Jobs',
+                author: 'Walter Isaacson',
+                readingStatus: true
+            },
+            {
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                author: 'Suzanne Collins',
+                readingStatus: false
+            }
+    ];
+
+        for (var i = 0; i < library.length; i++) 
+        {
+            var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
+            if (library[i].readingStatus) 
+            {
+              document.write("Already read " + book);
+            }
+            else
+            {
+             document.write("You still need to read " + book);
+            }
+            document.write("<br>")
+        }
+//5.Write a JavaScript program to get the volume of a Cylinder with four decimal places using object classes.
+//Volume of a cylinder : V = πr2h
+//where r is the radius and h is the height of the cylinder.            
+        function Cylinder(r,h)
+        {
+            this.rad = r;
+            this.hei = h;
+        //Calculations    
+        document.write(Math.PI * r * r * h);
+        
+        }
+        (Cylinder(2,7));
+//9.Write a JavaScript program to calculate the area and perimeter of a circle. Create two methods to calculate the area and perimeter. The radius of the circle will be supplied by the user.        
+          function Circle(rad)
+        {
+            this.radius = rad;
+        
+        this.area = function()
+        {
+            return Math.PI * rad * rad;
+        };
+        this.Perimeter = function()
+        {
+            return 2 * Math.PI * rad;
+        };
+        }
+        document.write("<br>")
+        var cir = new Circle(3);
+        document.write("The Area of Circle is "+cir.area().toFixed(2)+"<br>");
+        document.write("The Perimeter of Circle is "+cir.Perimeter().toFixed(2));
+        document.write("<br>");
+        let sr = "Sarfraz Tahir Rashhed";
+        if(sr == "")
+            {
+                document.write("empty")
+            }
+        else
+            {
+                document.write("Not empty");
+            }
+    document.write("<br>");
+        let ss = sr.split(",");
+        document.write(typeof(ss));
+        document.write(ss)
+    </script>
+    </body>
+</html>
