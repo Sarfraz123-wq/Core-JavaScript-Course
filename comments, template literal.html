@@ -1,0 +1,71 @@
+<html>
+<head></head>
+<body>
+    
+    
+    <script>
+    //Multiple Lines..
+        var comments = 
+                `Hey,
+                I wanna show you how to get a hundreds of suscribers in Youtube.
+                So follow me.
+
+                Thanks..
+                Sarfraz Team.`;
+                console.log(comments+"<br>");
+                document.write(comments+"<br>");
+                
+        var str = "Hello";
+        document.write(`${str} World`+"<br>");
+        var number = 4+6;
+        document.write(`${number} This is the answer`+"<br>")
+        var a =5;
+        var b =10;
+        document.write(`${a+b} This is the answer of this equaion`+"<br>")
+        //We can pass function as well.
+        function myfun(say)
+        {
+            return say;//jab hm return likhte hain to uske niche wala code execute nahi hota he.
+        }
+        document.write(`${myfun("Yes")}  World`+"<br>");
+        
+        //tagged template.
+        // It is the advanced version of template literal.
+        // The first argument of function stores in string like array.
+        
+        //Question. there are 5 movie tkts each of Rs.200 and if you buy all five tkts then there is a discount of Rs.50 for each tkt.
+        //Question2. Otherwise there is no discount available..
+        var ttkts = 5;
+        var price = 200;
+        var btkts =  5;
+        var discount = 50;
+        /* Simple template literal.
+        document.write(`There are ${ttkts} movie tkts each of Rs.${price} and if you buy all ${btkts} then there is a discount of Rs.${discount} for each tickets`);
+        */
+        //function ticket(theory, tticket,price,bticket,discount)
+        {
+            //return theory; // here only theory printed without expressions in array.
+            //return theory[0]; // It prints only "There are".
+            //we can return anything which we give it as parameter to the function.
+            //return price;// 200 price printed.
+            
+        }
+       // document.write(ticket `There are ${ttkts} movie tkts each of Rs.${price} and if you buy all ${btkts} then there is a discount of Rs.${discount} for each tickets`+"<br>");
+        // remember here function calls without parenthesis.
+        
+        //For Question2.
+        //variables are same initialized.
+        function myfunction(theory, ...rest)
+        {
+            if(btkts<5)
+                {
+                    discount=0;
+                    //return theory; // it prints theory. but we have to print it properly.
+                    return `${theory[0]} ${rest[0]} ${theory[1]} ${rest[1]} ${theory[2]} ${rest[2]} ${theory[3]} ${rest[3]} ${theory[4]}`
+                }
+             
+        }
+        document.write(myfunction `There are ${ttkts} movie tkts each of Rs.${price} and if you buy all ${btkts} then there is a discount of Rs.${discount} for each tickets`+"<br>");
+    
+    </script></body>
+</html>

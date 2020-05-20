@@ -1,0 +1,106 @@
+<html>
+<head></head>
+<body>
+    
+    <script>
+    /* Built in Inherit objects.
+    -Date
+    -String
+    -Array
+    we can inherit these built objects.
+    ex:
+       mydate extends Date{
+       
+       }
+    here extends use for inheritance.
+    */
+       /* class Father
+            {
+                showMoney()
+                {
+                    return "Father Money";
+                }
+            }
+        class son extends Father
+        {
+            showSonMoney()
+            {
+                return "Son Money";
+            }
+        }
+    var s = new son();
+        document.write(s.showMoney()+"<br>");
+        document.write(s.showSonMoney()+"<br>");
+        */
+        //Super Method or having constructors in both parent and child classes..
+        
+        class Manager
+            {
+                constructor(money)
+                {
+                    this.Mmoney = money;
+                }
+                showManagerMoney()
+                {
+                    return "Manager Money";
+                }
+            }
+        class Employee extends Manager
+        {
+                constructor(yahoo)
+                {
+                    //this.dokara = wahwah;
+                    super(yahoo);
+                    
+                }
+                showEmployeeMoney()
+                {
+                    return "Employee Money";
+                }
+        }
+        var man = new Manager('10k');
+        document.write(man.Mmoney+"<br>");
+        document.write(man.showManagerMoney()+"<br>");
+        //---------------------------------------------
+        var emp = new Employee('1k');
+        document.write(emp.Mmoney+"<br>");
+        document.write(emp.showEmployeeMoney()+"<br>");
+        document.write(emp.showManagerMoney()+"<br>");
+        
+        //---------------------------------------------
+        // Method Overriding
+        
+        class Sarfraz
+            {
+                constructor()
+                {this.c = 123;
+                 this.ic= 111;
+                 this.a = 1192;
+                }    
+                acha()
+                {
+                    return "Sarfraz method";
+                }
+            }
+        class Tahir extends Sarfraz
+            {
+                acha()
+                {
+                return 'Tahir method';
+                }
+            }
+        var s = new Sarfraz();
+        document.write(s.acha()+"<br>");
+        document.write(s.c+"<br>");
+        document.write(s.ic+"<br>");
+        document.write(s.a+"<br>");
+        var t = new Tahir();
+        document.write(t.ac=100);
+        document.write(t.acha()+"<br>");
+        // i can't access properties of Sarfraz..
+        // i'm not able to initialize tahir's properties as well.
+        
+            
+    </script>
+    </body>
+</html>

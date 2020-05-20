@@ -1,0 +1,45 @@
+<html>
+      
+<head>
+</head>
+<body>
+    <script>
+    var contacts = [
+        {
+            "firstName": "Sarfraz",
+            "lastName": "Rasheed",
+            "number": "03042016049",
+            "likes": "to become successful developer.",
+        },
+        {
+            "firstName": "Tahir",
+            "lastName": "Rasheed",
+            "number": "03052183197",
+            "likes": "to get marraige",
+        },
+        {
+            "firstName": "Basit",
+            "lastName": "Rasheed",
+            "number": "03054187197",
+            "likes": "sports",
+        }  
+    ];
+        function profileList(name,prop)
+        {
+            for(var i=0; i<contacts.length;i++)
+                {
+                    if(contacts[i].firstName == name)
+                        {
+                            return contacts[i][prop] || "No property exists"
+                        }
+                    else
+                        {
+                            return "No such contact";
+                        }
+                }
+        }
+    var data = profileList("Sarfraz","girls");
+        document.write(data);
+    </script>
+    </body>
+</html>

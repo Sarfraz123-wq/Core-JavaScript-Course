@@ -1,0 +1,63 @@
+<html>
+<head></head>
+<body>
+    
+    <script>
+    /* Constructor
+    ----------------
+    Constructor aik special method he jo class ko declare and initialize karane me kaam aata he. Constructor ki wajah se hm class ka object create karte hain or aik class me hm srf aik he constructor create kar sakte hain.
+    */
+        //1- class Declaration
+        
+        class Mobile
+        {
+            constructor(input)//parameterized 
+            {
+                // Instance members..
+                this.i = input;
+                this.show    = function()
+                {
+                    return "This is instance member";
+                };
+            }
+            // Prototype member
+            hojasimsim()
+            {
+                return "This is prototype member";
+            }
+        }
+        var Samsung = new Mobile(110);
+        document.write(Samsung.i);
+        document.write(Samsung.show());
+        
+        /*Another way of writing class
+        2- class Expression.
+       
+        var Mobile = class -------> here after class 2nd name can be give for example 
+        var Mobile = class Mobile2 
+        but it wll be called with first class i.e Mobile
+            {
+                constructor(input)//parameterized 
+            {
+                // Instance members..
+                this.i = input;
+                
+            }
+            // Prototype member
+            hojasimsim()
+            {
+                return "This is prototype member";
+            }
+        };
+        var Nokia = new Mobile(110);
+        document.write(Nokia.show());
+        Class Hoisted
+        --------------
+        Class is not hoisted means it cant be accessed before defining it.
+       
+       */        
+            
+    </script>
+    </body>
+
+</html>
