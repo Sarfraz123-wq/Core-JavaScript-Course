@@ -1,0 +1,195 @@
+<html>
+<head> </head>
+<body>
+    <script>
+    // 1- forEach covered..
+    // 2- array.map()
+        var number1 = [21,33,2,12,5,43];
+        var number2 = number1.map(myfunction);//it takes function as an argument.
+        document.write(number2+"<br>");
+        function myfunction(value,index,array)
+        {
+            return value * 2; // it simply multiplied 2 with array number1.
+        }
+        
+       /*
+       Note that the function takes 3 arguments:
+
+            .The item value
+            .The item index
+            .The array itself
+            When a callback function uses only the value parameter, the index and array parameters can be omitted:
+            //Example:
+        */    
+        
+        document.write("---------------------------------<br>");
+            var numbers1 = [45, 4, 9, 16, 25];
+            var numbers2 = numbers1.map(myFunction);
+            document.write(number2+"<br>");
+            function myFunction(value) 
+            {
+              return value * 2;
+            }
+        
+        document.write("---------------------------------<br>");
+        
+        /*
+        Array.filter()
+        The filter() method creates a new array with array elements that passes a test.
+
+        This example creates a new array from elements with a value larger than 18:
+
+        Example
+        */
+        var array1 = [12,32,22,11,54,34,55];
+        var array2 = array1.filter(myFunction);
+        document.write(array2+"<br>");
+            function myFunction(value,index,array)
+            {
+                return value > 30;        
+            }
+        document.write("---------------------------------<br>");
+        /*
+        Array.reduce()
+        ---------------
+        The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+        The reduce() method works from left-to-right in the array. See also reduceRight().
+
+        The reduce() method does not reduce the original array.
+
+        This example finds the sum of all numbers in an array:
+
+        Example
+        */
+        
+        var numbers = [12,22,43,33,44,55,1];
+        var numbers2 = numbers.reduce(myFunction);
+        document.write(numbers2+"<br>");
+        function myFunction(total,value,index,array) // index and array can be omitted.
+        {
+            return total + value;// sum is 210.
+        }
+        document.write("---------------------------------<br>");
+        
+        /*
+        Note that the function takes 4 arguments:
+
+        The total (the initial value / previously returned value)
+        The item value
+        The item index
+        The array itself
+        The example above does not use the index and array parameters. It can be rewritten to:
+        */
+        
+        // The reduce() can accept initial value as well.
+        var array = [1,2,3,4,5];
+        var array2 = array.reduce(myFunction, 100);// initial value.
+        document.write(array2+"<br>");
+        function myFunction(total,value)
+        {
+            return total + value; 
+            // answer is 115 because 15 of first array 100 added it as an initial value.
+        }
+        document.write("---------------------------------<br>");
+        /*
+        Array.reduceRight()
+        --------------------
+        The reduceRight() method runs a function on each array element to produce (reduce it to) a single value.
+
+        The reduceRight() works from right-to-left in the array. See also reduce().
+
+        The reduceRight() method does not reduce the original array.
+
+        This example finds the sum of all numbers in an array:
+
+        Example
+        */
+        var numbers1 = [1,2,3,4,5];
+        var numbers2 = numbers1.reduceRight(myFunction);
+        document.write(numbers2+"<br>");
+        function myFunction(total,value)
+        {
+            return total+value; // asnwer is 15
+        }
+        document.write("---------------------------------<br>");
+        var numbers1 = [1,2,3,4,5];
+        var numbers2 = numbers1.reduceRight(myFunction,100);
+        document.write(numbers2+"<br>");
+        function myFunction(total,value)
+        {
+            return total+value; // asnwer is 115 (same works)
+        }
+        document.write("---------------------------------<br>");
+        /*
+        Array.every()
+        The every() method check if all array values pass a test.
+
+        This example check if all array values are larger than 18:
+
+        Example
+        */
+        var numbers = [45, 4, 9, 16, 25];
+        var numbers2 = numbers.every(yesFunction);
+        document.write(numbers2+"<br>");
+        function yesFunction(value, index, array) 
+        {
+          return value > 18;
+            // returns false because all array values are not over 18.
+        }
+        document.write("---------------------------------<br>");
+       /*
+        Array.some()
+        The some() method check if some array values pass a test.
+
+        This example check if some array values are larger than 18:
+
+        Example
+        */
+        var numbers = [45, 4, 9, 16, 25];
+        var numbers2 = numbers.some(noFunction);
+        document.write(numbers2+"<br>");
+        
+        function noFunction(value, index, array) 
+        {
+          return value > 18;// true because some values are over 18
+        }
+        document.write("---------------------------------<br>");
+        /*
+        Array.find()
+        The find() method returns the value of the first array element that passes a test function.
+
+        This example finds (returns the value of) the first element that is larger than 18:
+
+        Example
+        */
+        var numbers = [4, 9, 16, 25, 29];
+        var numbers2 = numbers.find(ufFunction);
+        document.write(numbers2+"<br>");
+        function ufFunction(value, index, array)
+        {
+          return value > 18;//25 because 25 is the first number which is over 18.
+        }
+        document.write("---------------------------------<br>");
+       /*
+        Array.findIndex()
+        The findIndex() method returns the index of the first array element that passes a test function.
+
+        This example finds the index of the first element that is larger than 18:
+
+        Example
+       */
+        document.write("---------------------------------<br>");
+        var numbers = [4, 9, 16, 25, 29];
+        var numbers2 = numbers.findIndex(ohFunction);
+        document.write(numbers2+"<br>");
+        function ohFunction(value, index, array) 
+        {
+          return value > 18;// answer is 3rd index.
+        }
+        
+    </script>
+    
+    
+    </body>
+</html>

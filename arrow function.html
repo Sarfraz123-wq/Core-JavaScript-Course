@@ -1,0 +1,90 @@
+<html>
+<head></head>
+<body>
+    <script>
+        //Function Expression ...
+        var c = function show() //normal function
+        {
+            document.write("Sarfraz");
+        }
+        c();
+        document.write("<br>");
+        //Annonym function ...
+        var b = function()
+        {
+            document.write("Sarfraz");
+        }
+        b();document.write("<br>");
+        
+        //Arrow Function ...
+        var a = ()=> 
+        // is function me hm => space dekr likh sakte hain lekin line break nahi krsakte.
+        {
+        document.write("Sarfraz");
+        
+        }
+        a();
+        document.write("<br>");
+        var e = (a)=> //with parameters 
+        {
+        document.write(a);
+        
+        }
+        e(10);
+        //agar single parameter he to parenthesis or {} lagane ki zaroorat nahi he.
+
+        
+        document.write("<br>");
+        var d = b => //with parameters 
+        
+        document.write(b);
+        d(20);
+        
+        document.write("<br>");
+        var f = (x,y) => //with parameters 
+        
+        document.write(x+" " + y);
+        f(30,40);
+        document.write("<br>")
+        //with defaul parameter
+        var e = (a,b=20)=>
+        {
+            document.write(a + " "+ b);
+        }
+        e(10);//b=20 default agar b ki value pass karenge to wo print hogi.
+        document.write("<br>");  
+        var h = (a,...args)=>
+        {
+            document.write(a + " "+ args);
+        }
+        h(10,20,30,40,50);//rest parameters...
+        document.write("<br>");  
+        var myfun = a => document.write(a + " ");
+        document.write("Geekyshows");
+        myfun(20);///geekyshows20 output
+    //agar hamen aik line se zyada code likhna ho to { } use karna must he warna output sahih nahi aayega.
+    
+        document.write("<br>");  
+        var myfun = a => {
+            document.write(a + " ");
+            document.write("Yes ofcourse");
+                         }
+        myfun(20);//output 20 then yes ofcourse.. good..
+        document.write("<br>");  
+        var mygun = c => {return c}
+        document.write(mygun(100));
+        //isko yun b likh sakte hain 
+        document.write("<br>");  
+        var mygun = c => c// q k aik line he { } ki zaroorat nahi he reeturn khud samjh leta he.
+        document.write(mygun(100));
+        //agar curly likhta hn to return b likhna parega.
+        document.write("<br>")    
+        var yes = (a,b,c)=> a+b+c;
+        document.write(yes(10,20,30));
+    
+    </script>
+    </body>
+
+
+
+</html>

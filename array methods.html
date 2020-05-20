@@ -1,0 +1,98 @@
+<html><head></head><body>
+    
+    <script>
+        // concat method.
+        // It is used to merge n arrays.
+        var array1 = [1,2,3];
+        var array2 = [4,5,6];
+        var array3 = [7,8,9];
+        document.write(array1.concat(array2,array3+"<br>"));
+
+        //Join method.
+        // This method simply change the elements of an array into string with separator symbol comma.
+        var array = ["sarfraz","tahir","basit"];
+        var a = (array.join(","));
+        document.write(a+"<br>");
+        document.write(typeof(a)+"<br>");
+        //reverse method.
+        // this simply reverse the order of an array.
+        var array = ["sarfraz","tahir","basit"];
+        document.write(array.reverse()+"<br>");
+        //slice method..
+        // ye method simply array k elements print karta he.
+        var array =["sarfraz","tahir","basit","safi","osama","omer"];
+        document.write(array.slice(1,4)+"<br>");
+        // ye index 1 se 3 tak print krdega last count nahi hota he.
+        document.write(array.slice(2,10)+"<br>");
+        //agar ending mention nahi karte hain to wahan se poori array print hogi.
+        
+        //splice method.
+        //ye opposite he slice ka. ye delete karta he or insert ka b kam karta he.
+        
+        var array =["sarfraz","tahir","basit","safi","osama","omer"];
+        document.write(array.splice(1,4)+"<br>");
+        // ye index 1 se 4 elements delete krega index 1 ko milakr 4.
+        document.write(array+"<br>"); //updated array
+        var array2 =["sarfraz","tahir","basit","safi","osama","omer"];
+        array2.splice(1);//is case me saare delete hogaye srf index 0 ko chor kr
+        document.write(array2+"<br>");
+        var array3 =["sarfraz","tahir","basit","safi","osama","omer"];
+        array3.splice(2,3,"Dell","Hp","Lenovo");
+        document.write(array3+"<br>");// basit safi osama ki jagah dell wagera aaagaye.
+        // tostring method.. This method converts array into string.
+        var array =["sarfraz","tahir","basit","safi","osama","omer"];
+        var a = array.toString();
+        document.write(a+"<br>");
+        document.write(typeof(a)+"<br>"); // string
+        // is join and tostring methods are same??
+        
+        //Array.isArray method.
+        var array =["sarfraz","tahir","basit","safi","osama","omer"];
+        document.write(Array.isArray(array)+"<br>");//true
+        var abc ="sarfraz rasheed";
+        document.write(Array.isArray(abc)+"<br>");//false
+        // indexOf method..
+        var array = ["sarfraz","tahir","basit","ahmed"];
+        document.write(array.indexOf("omer")+"<br>"); // answer: -1
+        // Fill Method..
+        var array =["a","b","c","d","e"];
+        document.write(array.fill("sarfraz")+"<br>");
+        // ab ye poori array sarfraz se fill kardega..
+        document.write(array.fill("tahir",1,3)+"<br>");
+        // matlab isme index 1st and 2nd pe tahir print hoga baqi array as it is.
+        var array = new Array(3).fill("AHMED");
+        document.write(array); // yahan AHMED print karega 3times q k ye length he.
+        document.write("<br>");
+        //unshift method..
+        // By using this method we can only add n elements into array in beginning and it returns the length of an array.
+        var array = ["sarfraz","tahir","omer"];
+        document.write(array.unshift("basit","rauf","shafi")+"<br>");
+        document.write(array+"<br>");// updated array
+        
+        //shift method.
+        // It is the oppossite of unshift, it removes starting elements of an array.
+        var array = ["sarfraz","safi","osama","omer"];
+        document.write(array.shift()+"<br>"); // sarfraz removed..
+        document.write(array+"<br>"); // remaining elements of an array.
+        // Push method..
+        // This method adds the new elements at ending.
+        // As we saw earlier unshift method was adding elemnts at starting but this method adds at ending. 
+        var array =["basit","tahir","sarfraz"];
+        document.write(array.push("safi","osama","omer")+"<br>");
+        document.write(array+" Updated array"+"<br>");
+        //Pop method.
+        // it removes the last element of an array.
+        var array = ["sarfraz","tahir","basit"];
+        document.write(array.pop()+"<br>");
+        document.write(array+"<br>")
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits[fruits.length] = "Lemon";    // adds a new element (Lemon) to fruits,last index pe Lemon add hoga.
+        document.write(fruits+"<br>");
+        var a = 5E3;//exponent
+        document.write(a+"<br>");// 5000---> 5x10^3---> 5*10*10*10=5000        
+        var b = 5**3;//power
+        document.write(b+"<br>");// 125---> 5^3---> 125
+        // x ** y produces the same result as Math.pow(x,y)
+
+    </script>
+    </body></html>
