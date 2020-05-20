@@ -1,0 +1,183 @@
+<html>
+<head>
+    </head>
+<body>
+    
+    
+    <script>
+        function elseIf(val)
+        {
+        
+    if(val > 10)
+        {
+            return "greater than 10";
+        }
+    else if(val < 5)
+        {
+            return "smaller than 5";
+        }
+        else
+        {
+            return "btwn 5 and 10";
+        }
+   }
+        document.write(elseIf(9)+"<br>");
+        
+        // Logical Order in Else if..
+        function logical(val)
+        {
+        
+    if(val < 10)
+        {
+            return "less than 10";
+        }
+    else if(val < 5)
+        {
+            return "less than 5";
+        }
+        else
+        {
+            return "greater than or equal to 10";
+        }
+   }
+        document.write(logical(3)+"<br>");//less than but it should print less than 5.
+        // so we have to set condition less than 5 before less than 10. Order is very important in conditions.
+        //Chain if-else statement..
+        /*  num<5 - return tiny;
+            num < 10 return small
+           num < 15 - return "Medium";
+           num < 20 - return "large";
+           num >= 20 - return "Huge";
+        */
+        function chain(num)
+        {
+            if(num < 5)
+                {
+                    return "Tiny";      
+                }
+            else if(num < 10)
+                {
+                    return "Small";      
+                }
+            else if(num < 15)
+                {
+                   return "Medium"; 
+                }
+            else if (num < 20)
+                {
+                   return "large"; 
+                }
+            else if(num>=20)
+                {
+                    return "Huge";
+                }
+        }
+        document.write(chain(17)+"<br>");//large..
+        //Instead of unsing chain else if condition developers use switch statement.
+        /*
+        1- alpha
+        2- beta
+        3- gamma
+        4- delta
+        */
+        function check(num)
+        {
+           // var answer= "";
+            switch(num)
+                {
+                        case 1:
+                        return "alpha";
+                        break;
+                        case 2:
+                        return "beta";
+                        break;
+                        case 3:
+                        return "gamma";
+                        break;
+                        case 4:
+                        return "delta";
+                    default:
+                        answer = "i didnt understand that";
+                
+                }
+            //return answer; // both ways are correct you declare any variable and set value in it or simply return statement.
+        }
+    document.write(check(2)+"<br>");// here we cant use '2' coz it is a string.
+        
+        // Multiple options have same answer..
+        //-------------------------------------
+        
+        function sarfraz(num)
+        {
+            switch(num)
+                {
+                        case 1:
+                        case 2:
+                        case 3:
+                        return "low";
+                        break;
+                        case 4:
+                        case 5:
+                        case 6:
+                        return "Medium";
+                        break;
+                        default:
+                        return "i didnt understand that";
+                
+                }
+        }
+        document.write(sarfraz(3)+"<br>");//works..
+        
+        //change else if into switch.. we have already covered.
+        // it will print today's day by using getDay method.
+        switch (new Date().getDay())
+          {
+          case 0:
+            day = "Sunday";
+            break;
+          case 1:
+            day = "Monday";
+            break;
+          case 2:
+             day = "Tuesday";
+            break;
+          case 3:
+            day = "Wednesday";
+            break;
+          case 4:
+            day = "Thursday";
+            break;
+          case 5:
+            day = "Friday";
+            break;
+          case 6:
+            day = "Saturday";
+        }
+        document.write(day+"<br>");
+    
+        
+        // Return boolean values from a function.
+        
+        function isLess(a,b)
+        {
+            if(a<b)
+                {
+                    return true;
+                }
+            else
+                {
+                    return false;
+                }
+        }
+        document.write(isLess(3,7)+"<br>");
+        //instead of using this code it should be simply use like this.
+        
+        function isless(a,b)
+        {
+            return a<b;
+        }
+        document.write(isless(20,15));//false.. works.
+        
+    </script>
+    </body>
+</html>
