@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body>
+    
+    <script>
+    // forEach array me kam karta he or ye function me pehle name print karta he phir index or last  me poora object matlab poori array. hm parameters k names kuch b de sakte hain.    
+    arr = ["sarfraz","tahir",156,"sports"];    
+    arr.forEach(function(names,index,obj){
+        document.write(index+"="+names+" "+obj+"<br>")
+        
+    })
+        var array = ["abc","abc","abc","abc","abc"];
+        array.forEach(function(nalo,index,object)
+                     {
+                document.write(index+" = "+ nalo + " "+"<br>");
+        }
+         )
+        //taking an input
+        var array1 = new Array(5);
+        for(var i=0; i<array1.length; i++)
+            {
+                array1[i] = prompt("input ");
+            }
+        array1.forEach(function(nam,ind){
+            document.write(ind+" = "+nam+" "+"<br>");
+        })
+        
+        
+    // for of loop.
+    //--------------    
+    // It is another loop for array.
+    var names =["ab","cd","de","aa",12];
+    for(let value of names) // here we can use any name of variable instead of using value.
+        {
+            document.write(value+"<br>");
+        }
+    </script>
+    </body>
+</html>

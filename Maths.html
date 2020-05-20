@@ -1,0 +1,82 @@
+<html>
+<head></head>
+<body>
+    
+    <script>
+    document.write(Math.PI+"<br>");
+    document.write("-----------------------------<br>");
+    document.write(Math.round(4.4)+"<br>");//4
+    document.write(Math.round(4.7)+"<br>");//5
+    //works as significant rules.    
+    document.write("-----------------------------<br>");
+    document.write(Math.pow(2,3)+"<br>");
+    document.write("-----------------------------<br>");
+    document.write(Math.ceil(4.2)+"<br>");     // returns next integer i.e 5
+    document.write("-----------------------------<br>");
+    document.write(Math.floor(4.99)+"<br>");// returns same integer
+    document.write("-----------------------------<br>");
+    document.write(Math.sin(90)+"<br>");// returns in radians.
+    // if we need answer in degree we have to use the formula.
+    document.write("-----------------------------<br>");
+    document.write(Math.sin(90 * Math.PI/180)+"<br>");// returns in degree.
+    document.write("-----------------------------<br>"); 
+    //Math.min() and Math.max() 
+    document.write(Math.min(0, 150, 30, 20, -8, -200)+"<br>");  // returns -200
+    
+    /*
+    Maths Properties (Constants)
+    -----------------------------
+    Math.E        // returns Euler's number
+    Math.PI       // returns PI
+    Math.SQRT2    // returns the square root of 2
+    Math.SQRT1_2  // returns the square root of 1/2
+    Math.LN2      // returns the natural logarithm of 2
+    Math.LN10     // returns the natural logarithm of 10
+    Math.LOG2E    // returns base 2 logarithm of E
+    Math.LOG10E   // returns base 10 logarithm of E
+    -------------------------------------------------------
+    Method	     Description
+    abs(x)	     Returns the absolute value of x
+    acos(x)	     Returns the arccosine of x, in radians
+    asin(x)	     Returns the arcsine of x, in radians
+    atan(x)	     Returns the arctangent of x as a numeric value between -PI/2 and PI/2 
+    atan2(y,x)	 Returns the arctangent of the quotient of its arguments
+    ceil(x)	     Returns the value of x rounded up to its nearest integer
+    cos(x)	     Returns the cosine of x (x is in radians)
+    exp(x)	     Returns the value of Ex
+    floor(x)     Returns the value of x rounded down to its nearest integer
+    log(x)	     Returns the natural logarithm (base E) of x
+    max(x,y,z,...,n)Returns the number with the highest value
+    min(x,y,z,...,n)Returns the number with the lowest value
+    pow(x,y)    Returns the value of x to the power of y
+    random()     Returns a random number between 0 and 1
+    round(x)     Returns the value of x rounded to its nearest integer
+    sin(x)	     Returns the sine of x (x is in radians)
+    sqrt(x)	     Returns the square root of x
+    tan(x)	     Returns the tangent of an angle
+    */
+    //      Randoms..
+    //  ------------------    
+    document.write("-----------------------------<br>"); 
+    document.write(Math.random()+"<br>");// 0 to 1
+    document.write("-----------------------------<br>"); 
+    document.write(Math.random()*10 +"<br>");// 0 to 9
+    document.write("-----------------------------<br>"); 
+    document.write(Math.random()*100 +"<br>"); // 0 to 99
+    document.write("-----------------------------<br>"); 
+    document.write(Math.random() *10) + 1;
+    document.write("<br>");
+    document.write("-----------------------------<br>"); 
+    document.write(Math.random() *.5) +1;
+    document.write("<br>");
+    document.write("-----------------------------<br>"); 
+    function getRndInteger(min, max)
+    {
+    return Math.floor(Math.random() * (max - min));
+    }
+        document.write(getRndInteger(0,20)+"<br>");
+        
+          
+    </script>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+<head></head>
+<body>
+    
+    <script>
+       
+        var shakhs = function(name,email,id)
+        {
+            this.n = name;
+            this.e = email;
+            this.ID = id;
+        }
+        shakhs.prototype.profession = 'student';
+ 
+        
+        var Sarfrazzz = function(Qualifications,beh)
+        {
+            shakhs.call(this);
+            this.q = Qualifications;
+            this.behavior = beh;
+        }
+        
+        var Tahirrr = function(Qualifications)
+        {
+            Sarfrazzz.call(this);
+            this.Q = Qualifications;
+        }
+        var Basittt = function(Qualifications)
+        {
+            Tahirrr.call(this);
+            this.qq = Qualifications;
+        }
+        
+        Sarfrazzz.prototype = Object.create(shakhs.prototype);
+        Sarfrazzz.prototype.constructor = Sarfrazzz;
+        
+         Tahirrr.prototype = Object.create(shakhs.prototype);
+        Tahirrr.prototype.constructor = Tahirrr;
+        
+        
+        Basittt.prototype = Object.create(shakhs.prototype);
+        Basittt.prototype.constructor = Basittt;
+
+        
+        
+         document.write("---------------Sarfraz------------------------<br>");
+        var sarf = new Sarfrazzz('Bachelors in CS','Excellent');
+        sarf.n = "Sarfraz Rasheed Kehar";
+        sarf.e = 'keharsarfraz90@gmail.com';
+        sarf.ID = '1849095';
+        sarf.behavior = 'Masha Allah Excellent.'
+        sarf.q = 'Bachelors in CS';
+        sarf.profession = 'Student';
+            // for print
+        document.write("Full Name: " +sarf.n+"<br>");
+        document.write("Email: " +sarf.e+"<br>");        
+        document.write("ID: " +sarf.ID+"<br>");
+        document.write("Behavior: " +sarf.behavior+"<br>");
+        document.write("Profession: " +sarf.profession+"<br>");
+        document.write("Qualifications: " +sarf.q+"<br>");
+        
+        document.write("<br>");        
+        document.write("---------------Tahir------------------------<br>");
+        var tah = new Tahirrr('Bachelors in Economics');
+        tah.n = "Tahir Rasheed Kehar";
+        tah.e = 'kehartahir90@gmail.com';
+        tah.ID = '1849096';
+        tah.behavior = 'Masha Allah Excellent.'
+        tah.profession = 'Student';
+        tah.Q = 'Bachelors in Economics';
+            // for print
+        document.write("Full Name: " +tah.n+"<br>");
+        document.write("Email: " +tah.e+"<br>");        
+        document.write("ID: " +tah.ID+"<br>");
+        document.write("Behavior: " +tah.behavior+"<br>");
+        document.write("Profession: " +tah.profession+"<br>");
+        document.write("Qualifications: " +tah.Q+"<br>");
+         document.write("<br>");
+        document.write("---------------Basit------------------------<br>");
+        var bas = new Basittt('Bachelors in Civil Engr');
+        bas.n = "Basit Rasheed Kehar";
+        bas.e = 'keharbasit90@gmail.com';
+        bas.ID = '1849097';
+        bas.behavior = 'Masha Allah Excellent.'
+        bas.profession = 'Student';
+        bas.qq = 'Bachelors in Civil';
+            // for print
+        document.write("Full Name: " +bas.n+"<br>");
+        document.write("Email: " +bas.e+"<br>");       
+        document.write("ID: " +bas.ID+"<br>");
+        document.write("Behavior: " +bas.behavior+"<br>");
+        document.write("Profession: " +bas.profession+"<br>");
+        document.write("Qualifications: " +bas.qq+"<br>");
+
+       
+        
+    
+    </script>
+    </body>
+</html>

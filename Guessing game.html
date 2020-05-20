@@ -1,0 +1,30 @@
+<html>
+<head></head>
+<body>
+    
+    
+    <script> 
+   var  array = new Array(5);
+    var guess=5;    
+    var count=0;    
+        document.write("Its Guessing Game.."+"<br>"+"You have 5 chances you can take input if you guess right you win otherwise you loss."+"<br>");
+        for(var i=0; i<array.length; i++)
+            {
+                array[i] = prompt("Guess");
+                if(array[i]==guess)
+                    {
+                        document.write("Congratulation, You win!");
+                        break;
+                    }
+                else
+                    {
+                          count++;
+                        if(count==5)
+                            {
+                                document.write("Game over")
+                            }
+                    }
+            }
+    </script>
+    </body>
+</html>

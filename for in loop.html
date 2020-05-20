@@ -1,0 +1,42 @@
+<html>
+<head></head>
+<body>
+    <script>
+    var person = 
+        {
+            fname:"John",
+            lname:"Doe",
+            age:25
+        };
+
+        var text = "";
+        for (var i in person)
+        {
+          text = text + person[i] + "<br> ";
+        }
+        document.write(text);
+        function Mobile(model_no)
+        {
+            this.model = model_no;
+            this.color = 'white';
+            this.ram = '3gb';
+            this.price = function ()
+            {
+                document.write(this.model + " Price is 10k <br>");
+            };
+        }
+        var samsung = new Mobile('Galaxy');
+        var Nokia = new Mobile(1100);
+        // using for in looop
+        for(var i in Nokia)
+            {
+                if(typeof Nokia[i] !== 'function')//isse function print nahi hoga
+                document.write(i + " " + Nokia[i]+"<br>");
+            }
+        // for knowing only keys of any object.
+        document.write(Object.keys(samsung));
+
+    </script>
+    </body>
+
+</html>
