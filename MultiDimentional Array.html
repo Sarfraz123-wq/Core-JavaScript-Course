@@ -1,0 +1,77 @@
+<html>
+<head>
+    
+    </head>
+<body>
+    
+    <script> 
+    var array =[
+        ["Sarfraz","Dell",30000],
+        ["Tahir","Lenovo",23000],
+        ["Basit","Hp",26000],
+        ];
+        for(var i =0; i<3; i++) //for row
+            {
+                for(var j=0;j<3;j++)
+                    {
+                        document.write(i +" "+j+" = "+ array[i][j]+" <br>");
+                    }
+                document.write("<br>");
+            }
+    //     Empty 2D Array..
+        
+        var names = [
+            [],
+            [],
+            []
+        ];
+        for(let i=0; i<3; i++)
+            {
+                for(var j=0; j<3;j++)
+                    {
+                        
+                        document.write(i +" "+j+" = "+ names[i][j]+" <br>");
+                    }
+                document.write("<br>");
+            }           
+                
+                document.write("<br>");
+                document.write("<br>");
+            
+        
+        //2D Array by taking input from user. 
+            var rows=3;
+            var cols=2;
+            var geek = new Array(rows);
+            for(var i=0; i<rows;i++)
+                {
+                    geek[i] = new Array(cols);
+                }
+            
+            for(var i=0; i<rows;i++)
+            {
+                for(var j=0; j<cols;j++)
+                    {
+                        geek[i][j] = prompt("input");
+                    }
+            }
+            for(var i=0; i<rows;i++)
+            {
+                for(var j=0; j<cols;j++)
+                    {
+                        document.write(geek[i][j] +" ");
+                    }
+                        document.write("<br>");
+            }
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    </body>
+</html>

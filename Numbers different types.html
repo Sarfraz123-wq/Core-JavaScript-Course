@@ -1,0 +1,110 @@
+<html>
+<head></head>
+<body>
+    
+    
+    <script>
+        //JavaScript Numbers are Always 64-bit Floating Point JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard.
+    /*Number Methods
+    ------------------
+    1. toString()
+    This method simply converts number in string and we can calculate it's binary octa and hexa form as well.
+    syntax: number.toString(2)/ for binary.
+    */
+        var number = 10;
+        document.write(typeof(number)+"<br>"); //number
+        document.write(number.toString(2)+"<br>");
+    // 2. toExponential() where digits must be within 1 to 20 characters.
+        var a = 4563.2323332;
+        document.write(a.toExponential()+"<br>");// for all digits after decimal expon.
+        document.write(a.toExponential(2)+"<br>"); // for first two digits
+        document.write(a.toExponential(4)+"<br>"); // for first four digits
+        document.write(a.toExponential(6)+"<br>"); // for first six digits
+    //3. toFixed() ye basically round off ka kam karta he.
+        var b = 19.67545;
+        document.write(b.toFixed()+"<br>");// complete round off---20 answer
+        document.write(b.toFixed(2)+"<br>");//19.68
+        document.write(b.toFixed(4)+"<br>");//19.6755
+        document.write(b.toFixed(8)+"<br>");//19.67545000
+        //tofixed method point k bad jitna bolenge utne digits show karta he.
+    //4. toPrecision()//denotes total number off digits...
+        // ye method point se pehle b kam kar k round off kar k deta he.
+        var c = 19.67545;
+        document.write(c.toPrecision()+"<br>");//same 19.67545 q k hmne koi digit nahi bataya h
+        document.write(c.toPrecision(2)+"<br>");// two digits matlab 20 after round off
+        document.write(c.toPrecision(4)+"<br>");// 19.68
+        document.write(c.toPrecision(6)+"<br>");//19.6755
+        document.write(c.toPrecision(8)+"<br>");//19.675450
+    //5. Number.isInteger.. for only integer number.
+        var d = 100;
+        document.write(Number.isInteger(d)+"<br>");//true
+        var e = 10.5;
+        document.write(Number.isInteger(e)+"<br>");//false
+    //6. Number.isSafeInteger
+    //safe integer wo hote hain is range me hon chahe wo number negative ho ya +ve.
+        // 2^53-1 to number safe he.
+         var f = 137123;
+        document.write(Number.isSafeInteger(f)+"<br>");//true
+        /* Global javaScript Methods. these can be applied on every code.
+        Number()
+        parseInt()
+        parseFloat()
+        
+        Number()
+        ----------*/
+        var a = true;
+        var b = false;
+        var c = 100;
+        var d = "100";
+        var e = "Hello";
+        var f = new Date();// date jo hogi usko millisec me convert kedega
+        document.write(Number(a)+"<br>");//true.. 1
+        document.write(Number(b)+"<br>");//false .. 0
+        document.write(Number(c)+"<br>");// true .. 100
+        document.write(Number(d)+"<br>");// true .. 100
+        document.write(Number(e)+"<br>");// NaN because of characters
+        document.write(Number(f)+"<br>");// date in milliseconds.
+        //  parseInt()
+        // Simply ye number ko int me convert karta he.
+    
+        var a = "10";
+        var b = "12.00";
+        var c = "15.45";
+        var d = "10 20 30";
+        var e = "  90  ";
+        var f = "10 years";
+        var g = "years 10";
+        var h = ("020");
+        var f = new Date();
+        document.write(parseInt("10")+"<br>")//10
+        document.write(parseInt("12.00")+"<br>")//12
+        document.write(parseInt("15.45")+"<br>")//15
+        document.write(parseInt("10 20 30")+"<br>")//10 first string n0 print krta he.
+        document.write(parseInt("  90  ")+"<br>") // 90
+        document.write(parseInt("10 years")+"<br>") //10
+        document.write(parseInt("020")+"<br>") // 20 converts in decimal 20
+        document.write(parseInt("12",8)+"<br>")// 12 octa me he decimal=10 
+        document.write(parseInt("0x12")+"<br>")// 0 denotes hexa. 12hexa = 18 in decimal
+        document.write(parseInt("10",16)+"<br>")//10 in hexa = 16 decimal
+        // all converts in integer form.
+        // parse float is exactly same but it returns same value when number is  float otherwise it works like parseInt().
+        var  a = 16.56;
+        document.write(parseFloat(a)+"<br>");//16.56
+        Number(new Date("2017-09-30"));    // returns 1506729600000 in ms.
+        //JavaScript MIN_VALUE and MAX_VALUE
+        //MAX_VALUE returns the largest possible number in JavaScript.    
+        var x = Number.MAX_VALUE;
+        //Number Properties Cannot be Used on Variables
+        //Number properties belongs to the JavaScript's number object wrapper called Number.
+
+        //These properties can only be accessed as Number.MAX_VALUE.
+
+        //Using myNumber.MAX_VALUE, where myNumber is a variable, expression, or value, will return undefined:
+
+        //Example
+        //var x = 6;
+        //var y = x.MAX_VALUE;    // y becomes undefined
+
+    </script></body>
+    
+</html>

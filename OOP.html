@@ -1,0 +1,267 @@
+<html>
+<head>
+    </head>
+<body>
+    <script>
+    
+    /*
+        Class.
+        -------
+        A specific category can be defined as class.
+        for example. Mobile. It is a company. for example Samsung, Nokia etc so it is a class. Person it is a class. SarfrazTahir etc.
+        Properties and methods of class. 
+        All similar features are called  properties or methods.
+        Mobile()
+        {
+        modelno,price,ram,processor,color etc 
+        }
+        Person()
+        {
+        height, weight, address email etc.
+        }
+        We define a class in JS by using custom Constructor.
+        Object consttructor is called Class.
+        but ES6 introduces the concept of class by using class keyword.
+        
+    */
+        var Mobile = function (model_no,price)
+        {
+            this.model = model_no;
+            this.price = price;
+            this.color = 'White';
+        }
+        var Samsung = new Mobile('Galaxy','30k');
+        var Nokia = new Mobile(1100,'10k');
+        document.write(Samsung.model+"<br>");
+        document.write(Samsung.color+"<br>");
+        document.write(Samsung.price+"<br>");
+        //for Nokia now.
+        document.write("-----<br> ")
+        document.write(Nokia.model+"<br>");
+        document.write(Nokia.color+"<br>");
+        document.write(Nokia.price+"<br>");
+        /* 
+        Here Mobile is a class.
+        this keyword is used to indicate current instance for example if i use Samsung as an object of class so this keyword helps to indicate this.model is refers that it is using by Samsung.
+        If we don't use this keyword then multiple objects how can understand the properties without having this keyword.
+        */
+        
+        /*
+        How to make properties or methods private.
+        1- simply whre we write this.color change this keyword in var variable. Now it becomes private objects can access it.
+        var color = 'white';
+        How to access private properties..
+        For accessing private properties we make public function of it for example.
+        var price = '30k';
+        this.sellingPrice = function()
+        {
+        return(price);
+        }
+        now we call it by it's new name i.e sellingPrice.
+        document.write(Nokia.sellingPrice());
+    
+        Prototype
+        ------------
+        */
+        var person = function(age,height)
+        {
+            // Instance Members.
+            this.umar = age;
+            this.Height = height;
+            
+        }
+        var Sarfraz = new person(20,5.10);
+        var tahir = new person(21,5.8);
+        //Sarfraz.email = 'keharsarfraz';
+        //document.write(Sarfraz.email+"<br>");// works
+        
+        //document.write(tahir.email+"<br>");// undefined
+        
+        //agar hmen general work karna ho to hm prototype use karte hain phr wo properties tamam objects k lye work karti hain.
+    
+        person.prototype.nationality = 'Pakistani';
+        document.write(Sarfraz.nationality+"<br>");
+        document.write(tahir.nationality+"<br>");//works for both..
+        
+        // How to check all properties of specific object both instance and prototypes.
+        // we use for in loop it gives us all properties.
+        for(var key in Sarfraz)
+            {
+                document.write(key+"<br>");//it shows all properties
+            }
+        // but Object.keys only shows instance properties.
+        document.write(Object.keys(tahir));//shows only umar,height not nationality.
+        
+        
+        /*
+        Prototype Object.
+        ---------------------
+        In javaScript inheritance is acheived by prototype.
+        ----------------------------------------------------
+        Every obj is associated with another obj.
+        1- object.prototype object
+        it is associated with null.
+        var b2 = new Array()
+        b2 is associated with Array prototype coz Array is an object.
+        b2 will inherit all properties of an Array.prototype.
+        */
+        
+        //console.log(Object.prototype);
+        var b2 = new String();
+        console.log(Object.getPrototypeOf(b2));//  string.
+        
+        /*
+            How prototype works in JS?
+            function Mobile()
+            jab hm koi function banate hain to do object bante hain aik wo jo hmne banaya he jese yahan mobile or doosra built in jis sey mobile associated he prototype. hum prototype ko access kar saktte hain function Mobile.prototype.
+            
+            Issi tarah jab hm kisi function ka obj banate hain to uski aik built in property hoti he __proto__ jo prototype ko indicate krti he.
+            ex. var Nokia = new Mobile();
+            nokia.__proto__; ye prototype ko indicate krti he property.
+            
+            var samsung = new Mobile();
+            samsung.a;
+            ye object samsung check krega pehle apne object/function me k kya tmhare pas a nam ki koi property he agar he to display krdo agar nahi he to ye __proto__ property ki help se ye prototype k pas jata he or wahan search karta he agar wahan mil jati he display krta he warna kehta he undefined..
+            
+            agar a property function me initialize he to direct function se display karta he prototype k pas nahi jata he.
+            
+            agar a ki value function me 20 initialize he or function k bahar b a ki value prototype se 10 initialize kari he to ye 20 print krega q prototype k pas jaayega he nahi. 
+            */
+        
+            function Mobilink()
+            {
+                
+            }
+            Mobilink.prototype.a = 10;
+        
+            function Zong()
+            {
+                Mobilink.call(this);    
+               this.b = 20; // agar me this.b likh raha hn to 20 print kar raha he agar                    me var b = 20 likhta hn to prototype wali value 10 print                   kar raha he.
+            }
+            Zong.prototype.c = 90;
+            Zong.prototype = Object.create(Mobilink.prototype);
+            Zong.prototype.constructor = Zong;
+                
+            var jazz = new Mobilink();
+            document.write(jazz.a+"<br>");//prints 10 good.
+        
+            var yes = new Zong();
+            document.write(yes.b+"<br>");//prints 20 good.
+            document.write("+++++++++++++++++++++++++++++++<br>")
+            document.write(yes.c+"<br>");// undefined
+        
+        /* Prototype Inheritance in JavaScript
+        
+        function Ufone()
+        {
+        this.a = 10;
+        }
+        Mobile.prototype.b = 30;
+        
+        var m = new Ufone();
+        
+        
+        function Telenor()
+        {
+        Ufone.call(this);// issey inheritance hoti he magar srf hm functions ki properties ko access kar saktte hain agar koi property prototype se likhi hui he to usey hm access nahi kr sakte hain is lye js me prototype inheritance acheive karni parti he.
+       
+        this.c = 20;
+        }
+        
+        var t = new Telenor();
+        t.b likhon to a/c to inheritance access kar sakta hn lekin ye prototype se likha huwa he to me nahi kar sakta is lye hmen child class yani hamari base ya parent class he Ufone or child class Telenor me likhna parega Telenor.prototype = Object.create(Ufone.prototype) is sey prototype inheritance acheive hoti he.
+        
+        ab me t.b access kar sakta hun.
+        c,c++,c# java wagera me inheritance classes se hoti he lekin yahan prototype se hoti he q k agar object ko koi property access karni hotti he to wo pehle apne function me search karta he phr prototype pe jata he. 
+        
+        Ufone.prototype.b = 30;
+        
+        var u = new Ufone();
+        */
+        
+        // Parent class
+        
+        var Ufone = function()
+        {
+        this.ae = 10;
+        }
+        Ufone.prototype.bi = 20;
+        
+          // Sub Class
+        var Telenor = function()
+        {
+            Ufone.call(this);
+            this.ci = 30;
+        }
+        Telenor.prototype.di = 40;
+        
+        var Warid = function()
+        {
+            Telenor.call(this);
+            this.ei = 50;
+        }
+        Warid.prototype.af = 60;
+        
+        //Prototype Inheritance.
+        Telenor.prototype = Object.create(Ufone.prototype);
+        // ab constructor ko reset krne k lye good practice he
+        Telenor.prototype.constructor = Telenor;
+        
+        //Prototype Inheritance.
+        Warid.prototype = Object.create(Telenor.prototype);
+        // ab constructor ko reset krne k lye good practice he
+        Warid.prototype.constructor = Warid;
+       
+        document.write("-----------------Ufone---------------<br>") 
+        var u = new Ufone();
+        document.write(u.ae+"<br>");//10
+        document.write(u.bi+"<br>");//20    
+        document.write("-----------------Telenor---------------<br>") 
+        var t = new Telenor();
+        document.write(t.ae+"<br>");//10
+        document.write(t.bi+"<br>");//20
+        document.write(t.ci+"<br>");//30
+        document.write(t.di+"<br>");//undefined
+        document.write("----------------Warid---------------------<br>") 
+        var w = new Warid();
+        document.write(w.ae+"<br>");//10
+        document.write(w.bi+"<br>");//20
+        document.write(w.ci+"<br>");//30
+        document.write(w.di+"<br>");//undefined
+        document.write(w.ei+"<br>");//50
+        document.write(w.af+"<br>");//undefined
+        
+         
+        
+        
+        
+        
+        document.write("-----------------------<br>");
+        document.write("..........Method Overriding ............<br>");
+        var abc = function()
+        {
+            
+        }
+        abc.prototype.bhai = function()
+        {
+            return "Parent Class";
+        }
+        var xyz = function()
+        {
+            
+        }
+        xyz.prototype.bhai = function()
+        {
+            return "Child1 class";
+        }
+        
+        var hhh = new abc();
+        document.write(hhh.bhai()+"<br>");
+        document.write("--------------<br>")
+        
+        var ggg = new xyz();
+        document.write(ggg.bhai()+"<br>");
+    </script>
+    </body>
+</html>

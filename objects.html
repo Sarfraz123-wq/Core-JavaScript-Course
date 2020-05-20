@@ -1,0 +1,180 @@
+<html>
+<head>
+    
+    </head>
+<body>
+    
+    <script>
+        // objects are similar to array we can use different data types here but we cant access it with index numbers we use here properties. Everything before colon is property and after colon is its value.
+    var person = 
+        {
+        "first Name": "Sarfraz",
+        lastName: "Rasheed",
+        id:007,
+        age:20,
+        profession:"student",
+        fullName: function()
+            {
+               return this.firstName + " " + this.lastName;
+            }
+            
+        
+    };
+        //Update object properties..
+        //Adding extra properties..
+        // delete property.
+        delete person.id;
+        person.country="Pakistan";
+        person["first Name"] = "Tahir";
+        var b = person['first Name'];// when property's name has space we can use bracket as well.
+        document.write(b+"<br>");
+        var c = person.lastName;
+        document.write(c+"<br>");
+        var a = person.fullName();
+        document.write(a+"<br>")
+        var nalo = "Sarfraz";
+        document.write(nalo+"<br>");// we can use variables as well.
+        document.write(person["first Name"]+"<br>");//updated.
+        document.write(person.country+"<br>");//it works.
+        document.write(person.id+"<br>");//undefined deleted..
+        
+        //Conversion from switch to object..
+        var val = prompt("input");
+        var result="";
+        switch(val)
+            {
+                case 'name':
+                result = "Sarfraz ";
+                    break;
+                case 'id':
+                result = "007 ";
+                    break;
+                case 'age':
+                result = "20 ";
+                    break;
+                default:
+                    result= "Sorry i didn't understand that";
+                    
+            }
+        document.write(result);
+        
+        //Object.
+        var val =
+            {
+                'name': "Sarfraz",
+                'id': 007,
+                'age': 20
+            };
+        document.write(val.name+"<br>");
+        document.write(val.id+"<br>");
+        document.write(val.age+"<br>");
+        
+        // Checking myObject has property or not.
+        
+        var myObj = 
+            {
+                firstName: "Omer",
+                lastName: "Rasheed",
+                age:15
+            };
+        
+       function checkObj(checkProp)
+        {
+            if(myObj.hasOwnProperty(checkProp))
+                {
+                    return myObj[checkProp];
+                }
+            else
+                {
+                    return "Not Found";
+                }
+        }
+        
+        document.write(checkObj('hello'));//Not Found, works..
+        /* factory Function
+        ye object return karta he.
+        
+        var samsung = 
+            {
+            model:'Galaxy',
+            ram: '3gb',
+            price: function()
+            {
+               return 10000;
+            }
+            
+            };
+        var nokia = {
+            model:'110',
+            ram:'1gb',
+            price: function()
+            {
+               return 1000;
+            }
+        
+        };
+        document.write(samsung.ram+"<br>");
+        
+        document.write(samsung.price+"<br>");
+        document.write(nokia.model);
+        //agar hmne isi tarah ka kam karna he jisme cheezen repeat ho rahi hon jese yahn sab ki properties same he to hm factory function ka use krte hain...
+        */
+        
+        //Using Constructor.
+        function mobile(model_no)
+        {
+            this.model = model_no;
+            this.price= function()
+                {
+                document.write(" Price 10000");
+                };
+        }
+        var samsung = new mobile('Galaxy');
+        var nokia = new mobile(1100);
+        document.write(samsung.model+"<br>");
+        samsung.price();
+        document.write("<br>");    
+        document.write(nokia.model+"<br>");
+        nokia.price();
+        
+        
+        /* 
+        Different ways of creating object
+        1- Object Literal.
+        var fees = {};
+        fees.Sarfraz = 30k;
+        fees.Tahir = 10.7k;
+        2- Object Literal + declaration and initialization.
+        var fees =
+        {
+            Sarfraz = 30k;
+            Tahir = 10.7k;
+        };
+        3- Object Constructor.
+        var fees = new Object ();
+        1,2,3 k srf single object he ban sakte hain..
+        4- Factory function
+        var Mobile()
+            {
+        return 
+        {
+        model: 'Galaxy';
+        }
+            }
+            var samsung = Mobile();
+            var Nokia = Mobile();
+        agar ye use krte hn to hm multiple objects use kar sakte hain
+        ex. var samsung = Mobile();
+        5- Constructor function.
+        function Mobile()
+        {
+        this.Sarfraz = 30k;
+        this.Tahir = 10.7k;
+        
+        }
+            var samsung = new Mobile();
+            var Nokia = new Mobile();
+        
+    </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head> </head>
+<body>
+    
+    <script>
+    var matrix = [1,2,3,
+                 4,5,6,
+                 7,8,9];
+        
+        var a = [5,6,8,9];
+        var b = [4,6,7,9];
+        var c = [4,5,7,8];
+        var result1;
+        var result2; 
+        var result3;
+                    for(var i=0; i<1; i++)
+                    {
+                        var sub1 = a[i] * a[a.length-1];
+                    }
+                    for(var i=1; i<=1; i++)
+                    {
+                        var sub2 = a[i] * a[a.length-2];
+                    }
+                    result1 =  sub1 - sub2 * matrix[0];
+                    document.write(result1 +" <br>");
+                    
+                
+                 
+                    for(var j=0; j<1; j++)
+                    {
+                        var sub1 = b[j] * b[b.length-1];
+                    }
+                    for(var j=1; j<=1; j++)
+                    {
+                        var sub2 = b[j] * b[b.length-2];
+                    }
+                     result2 = matrix[1]* (sub1-sub2);  
+                    document.write(result2+"<br>");
+                    
+        
+                    for(var k=0; k<1; k++)
+                    {
+                        var sub1 = c[k] * c[c.length-1];
+                    }
+                    for(var k=1; k<=1; k++)
+                    {
+                        var sub2 = c[k] * c[c.length-2];
+                    }
+                     result3 = matrix[2] * (sub1 - sub2);
+                     document.write(result3+"<br>");
+                
+            var det = result1 - result2 + result3;
+            document.write("The determinant is "+det);
+    </script></body>
+</html>

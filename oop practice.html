@@ -1,0 +1,59 @@
+<html>
+<head>
+    </head>
+<body>
+    <script>
+   
+        
+    var person = function()
+    {
+        this.a = 10;
+    }
+    person.prototype.b = 20;
+        
+    var kehar = function()
+    {   
+        person.call(this);
+        this.c = 30;
+    }
+    kehar.prototype.d = 40;
+    
+    var soomro = function()
+    {
+        person.call(this);
+        kehar.call(this);
+        this.e = 50;
+    }
+    soomro.prototype.f = 60;
+       
+    kehar.prototype = Object.create(person.prototype);
+    kehar.prototype.constructor = kehar;
+        
+    soomro.prototype = Object.create(kehar.prototype);
+    soomro.prototype.constructor = soomro;
+        
+    var p = new person();
+    document.write(p.a+"<br>");
+    document.write(p.b+"<br>");
+    document.write("--------------------<br>")
+        
+    var k = new kehar();
+    document.write(k.a+"<br>");
+    document.write(k.b+"<br>");
+    document.write(k.c+"<br>");    
+    document.write(k.d+"<br>");    
+    document.write("--------------------<br>")
+    var s = new soomro();
+    document.write(s.a+"<br>");
+    document.write(s.b+"<br>");
+    document.write(s.c+"<br>");
+    document.write(s.d+"<br>");
+        
+    document.write(s.e+"<br>");    
+    document.write(s.f+"<br>");
+        
+        
+        
+    </script>
+    </body>
+</html>

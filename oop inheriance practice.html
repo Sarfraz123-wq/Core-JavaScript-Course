@@ -1,0 +1,75 @@
+<html>
+<head>
+    
+    </head>
+<body>
+    
+    
+    <script>
+    // In javascript one class can have only one constructor.    
+    class anything
+        {
+            
+            constructor()
+            {
+                return this.uff = "Default Constructor";
+            }
+        }
+        class anythingtwo
+        {
+            constructor(input)
+            {
+                this.i = input;
+            }
+        }
+        class anything3
+        {
+            constructor(num1,num2)
+            {
+                this.no1 = num1;
+                this.no2 = num2;
+                this.res = num1 + num2;
+            }
+            
+        }
+       var an1 = new anything();
+        document.write(an1.uff+"<br>");
+       var an2 = new anythingtwo("parameters");
+        document.write(an2.i+"<br>");
+       var an3 = new anything3(10,15);
+        document.write(an3.res+"<br>");
+        document.write("-----------------------<br>");
+        
+        class shape
+            {
+                
+                width()
+                {
+                 
+                }
+                height()
+                {
+                    
+                }
+            }
+        class Rectangle extends shape
+        {
+            area(width,height)
+            {
+                this.w = width;
+                this.h = height;
+                return this.res = width*height;    
+            }
+        }
+        var sh = new shape();
+       // sh.width(10);
+    //  sh.height(5);
+    //    document.write(sh.w+"<br>");
+      //  document.write(sh.h+"<br>");
+        var rec = new Rectangle();
+        document.write(rec.area(10,5));
+       
+    
+    </script>
+    </body>
+</html>
